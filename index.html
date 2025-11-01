@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deviant Dev</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <img src="Dlogo.png" alt="Deviant Dev" class="hero-logo">
+                <h1>Deviant Dev</h1>
+                <p>Innovative applications that break the mold</p>
+                <button class="cta-button" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Explore Products</button>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About</h2>
+            <p>We create cutting-edge applications that challenge conventional thinking and deliver exceptional user experiences.</p>
+        </section>
+
+        <section id="products" class="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card" onclick="window.location.href='swaggereditor.html'" style="cursor: pointer;">
+                    <div class="card-icon"><i class="fas fa-code"></i></div>
+                    <h3>SwaggerEditor</h3>
+                    <p>Modern OpenAPI 3.0 editor designed for developers who demand speed, precision, and collaboration.</p>
+                    <div class="tech-stack">
+                        <span class="tech">React 18</span>
+                        <span class="tech">Monaco Editor</span>
+                        <span class="tech">Express.js</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="card-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Web Platform</h3>
+                    <p>Cutting-edge web application with modern architecture</p>
+                    <div class="tech-stack">
+                        <span class="tech">React</span>
+                        <span class="tech">TypeScript</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="card-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Solution</h3>
+                    <p>Scalable cloud-native application for enterprise needs</p>
+                    <div class="tech-stack">
+                        <span class="tech">AWS</span>
+                        <span class="tech">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Get In Touch</h2>
+            <p>Ready to collaborate? Let's build something amazing together.</p>
+            <div class="contact-links">
+                <a href="#" class="contact-link"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Deviant Dev. All rights reserved.</p>
+    </footer>
+</body>
+</html>
