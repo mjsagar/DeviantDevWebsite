@@ -590,6 +590,87 @@ footer p {
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
 }
 
+.tech-specs {
+    padding: 8rem 0;
+    background: #f8f9fa;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.tech-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tech-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #667eea;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+.tech-category ul {
+    list-style: none;
+}
+
+.tech-category li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.github-info {
+    padding: 8rem 0;
+    background: white;
+}
+
+.github-card {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    margin-top: 3rem;
+}
+
+.github-icon {
+    font-size: 4rem;
+}
+
+.github-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    background: white;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -624,5 +705,10 @@ footer p {
     
     .container {
         padding: 0 1.5rem;
+    }
+    
+    .github-card {
+        flex-direction: column;
+        text-align: center;
     }
 }
