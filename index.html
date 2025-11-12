@@ -31,8 +31,93 @@
         </section>
 
         <section id="about" class="about">
-            <h2>About</h2>
-            <p>We create cutting-edge applications that challenge conventional thinking and deliver exceptional user experiences.</p>
+            <div class="about-content">
+                <h2>About Deviant Dev</h2>
+                <p class="about-lead">We create cutting-edge applications that challenge conventional thinking and deliver exceptional user experiences.</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Active Products</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Innovation Focus</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Possibilities</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="services-content">
+                <h2>What We Do</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-code"></i></div>
+                        <h3>Full-Stack Development</h3>
+                        <p>Modern web applications built with React, Node.js, and cutting-edge technologies for optimal performance and user experience.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-robot"></i></div>
+                        <h3>AI Integration</h3>
+                        <p>Intelligent applications powered by artificial intelligence, machine learning, and natural language processing capabilities.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Cross-Platform Solutions</h3>
+                        <p>Responsive applications that work seamlessly across desktop, tablet, and mobile devices with consistent user experiences.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Developer Tools</h3>
+                        <p>Professional tools and platforms designed to enhance developer productivity and streamline development workflows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="testimonials-content">
+                <h2>What People Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Deviant Dev's applications are truly innovative. The AI Mind Map tool has revolutionized how our team brainstorms and organizes ideas."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <span>Product Manager, TechCorp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The OpenAPI Editor is a game-changer for our development workflow. It's intuitive, powerful, and saves us hours of work."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <span>Lead Developer, StartupXYZ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Professional, innovative, and user-focused. Deviant Dev consistently delivers applications that exceed expectations."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Emily Rodriguez</h4>
+                                <span>CTO, InnovateLab</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="products" class="products">
@@ -58,15 +143,24 @@
                         <span class="tech">MongoDB</span>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="card-icon"><i class="fas fa-cloud"></i></div>
-                    <h3>Cloud Solution</h3>
-                    <p>Scalable cloud-native application for enterprise needs</p>
+                <div class="product-card" onclick="window.location.href='aimindmap.html'" style="cursor: pointer;">
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI Mind Map</h3>
+                    <p>AI-powered mind mapping tool that transforms your ideas into visual, interactive mind maps instantly</p>
                     <div class="tech-stack">
-                        <span class="tech">AWS</span>
-                        <span class="tech">Docker</span>
+                        <span class="tech">React</span>
+                        <span class="tech">OpenAI API</span>
+                        <span class="tech">D3.js</span>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Build Something Amazing?</h2>
+                <p>Let's collaborate and create innovative solutions that make a difference.</p>
+                <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
             </div>
         </section>
 
