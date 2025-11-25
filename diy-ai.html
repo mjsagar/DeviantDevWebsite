@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DIY AI - Your intelligent assistant for home improvement projects. Get AI-powered guidance, voice input, video tutorials, and printable instructions.">
+    <meta name="keywords" content="DIY, home improvement, AI assistant, voice input, tutorials, home repair">
+    <title>DIY AI - Your Intelligent Home Improvement Assistant</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background: #000;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: #667eea;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-description {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .step-title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .step-description {
+            color: #666;
+        }
+
+        /* Screenshots */
+        .screenshots {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .screenshot-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        .screenshot {
+            max-width: 300px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .stars {
+            color: #ffc107;
+            margin-bottom: 15px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2em;
+            }
+
+            .tagline {
+                font-size: 1.2em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">🔨 DIY AI</div>
+            <p class="tagline">Your Intelligent Home Improvement Assistant</p>
+            <p style="font-size: 1.1em; margin-bottom: 20px;">Get expert AI guidance for any DIY project - just ask!</p>
+            
+            <div class="cta-buttons">
+                <a href="https://apps.apple.com/app/diy-ai/id6755657252" class="btn btn-primary" target="_blank">
+                    <span>📱</span> Download on App Store
+                </a>
+                <a href="#" class="btn btn-secondary">
+                    <span>🤖</span> Get it on Google Play
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <p class="section-subtitle">Everything you need to tackle any home improvement project</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3 class="feature-title">Voice-to-Text</h3>
+                    <p class="feature-description">Speak your DIY questions hands-free. Real-time transcription works offline for instant, private voice input.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">AI-Powered Guidance</h3>
+                    <p class="feature-description">Get expert step-by-step instructions powered by advanced AI. Clear, detailed guidance with visual descriptions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📹</div>
+                    <h3 class="feature-title">Video Tutorials</h3>
+                    <p class="feature-description">Watch curated YouTube tutorials for visual learning. Multiple videos for each task to match your skill level.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🖨️</div>
+                    <h3 class="feature-title">Print & Share</h3>
+                    <p class="feature-description">Print instructions to take to your workspace or share guides with family and friends as professional PDFs.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3 class="feature-title">Tool Recommendations</h3>
+                    <p class="feature-description">Get lists of required and recommended tools with descriptions. Know exactly what you need before you start.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">7 Languages</h3>
+                    <p class="feature-description">Available in English, Spanish, French, German, Portuguese, Hindi, and Chinese. DIY help in your language.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">♿</div>
+                    <h3 class="feature-title">Fully Accessible</h3>
+                    <p class="feature-description">WCAG 2.1 AA compliant with screen reader support, keyboard navigation, and customizable font sizes.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Privacy First</h3>
+                    <p class="feature-description">Voice processing happens on your device. No data collection, no tracking. Your privacy matters.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Works Offline</h3>
+                    <p class="feature-description">Voice-to-text works without internet. Save guides for offline access. DIY anywhere, anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Get expert DIY help in 3 simple steps</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Ask Your Question</h3>
+                    <p class="step-description">Type or speak your DIY question. Voice input works hands-free and offline.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Get AI Guidance</h3>
+                    <p class="step-description">Receive detailed step-by-step instructions, tips, warnings, and tool lists.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Watch & Build</h3>
+                    <p class="step-description">Watch video tutorials, print guides, and complete your project with confidence!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="features" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Perfect For</h2>
+            <p class="section-subtitle">Whatever your DIY project, we've got you covered</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚰</div>
+                    <h3 class="feature-title">Plumbing</h3>
+                    <p class="feature-description">Fix leaky faucets, unclog drains, replace fixtures, and more.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3 class="feature-title">Electrical</h3>
+                    <p class="feature-description">Replace switches, install fixtures, troubleshoot safely.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Painting</h3>
+                    <p class="feature-description">Prep, paint, and finish like a pro with expert techniques.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🪚</div>
+                    <h3 class="feature-title">Woodworking</h3>
+                    <p class="feature-description">Build furniture, shelves, and custom projects.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3 class="feature-title">Home Repair</h3>
+                    <p class="feature-description">Patch drywall, fix doors, repair windows, and more.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3 class="feature-title">Garden Projects</h3>
+                    <p class="feature-description">Build planters, install irrigation, landscape design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Users Say</h2>
+            <p class="section-subtitle">Join thousands of satisfied DIYers</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The voice input feature is a game-changer! I can ask questions while my hands are busy. The instructions are clear and easy to follow."</p>
+                    <p class="testimonial-author">- Sarah M.</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Finally fixed my leaky faucet! The step-by-step guide with video tutorials made it so easy. Saved hundreds on a plumber."</p>
+                    <p class="testimonial-author">- John D.</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Love that I can print the instructions and take them to my garage. The tool recommendations are spot-on. Best DIY app ever!"</p>
+                    <p class="testimonial-author">- Mike R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Next Project?</h2>
+            <p>Download DIY AI today and get expert guidance for any home improvement task!</p>
+            
+            <div class="cta-buttons">
+                <a href="https://apps.apple.com/app/diy-ai/id6755657252" class="btn btn-primary" target="_blank">
+                    <span>📱</span> Download on App Store
+                </a>
+                <a href="#" class="btn btn-secondary">
+                    <span>🤖</span> Get it on Google Play
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2025 DeviantDev.co.uk. All rights reserved.</p>
+            <p style="margin-top: 10px; opacity: 0.7;">DIY AI - Your Intelligent Home Improvement Assistant</p>
+        </div>
+    </footer>
+</body>
+</html>
