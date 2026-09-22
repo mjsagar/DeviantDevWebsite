@@ -1,7 +1,7 @@
-# App Showcase Page Specification: "My Washing Is Out"
+# App Showcase Page Specification: "Clothing Line"
 
 > **Hand-off Brief for Website Development Agent**  
-> **App Name:** My Washing Is Out  
+> **App Name:** Clothing Line  
 > **Studio / Developer:** Deviant Dev ([deviantdev.com](https://deviantdev.com) / [GitHub: mjsagar](https://github.com/mjsagar))  
 > **Platform:** iOS 17.0+ (iPhone, Home & Lock Screen Widgets, Apple Watch companion alerts)  
 > **Status:** Ready for App Store release  
@@ -11,7 +11,7 @@
 ## 1. Executive Summary & Brand Identity
 
 ### The Product
-**My Washing Is Out** is a smart, hyper-local weather companion app designed specifically for people who line-dry their laundry outside. Users tap **"Hang Out"** when their wash goes on the line. The app monitors real-time meteorological conditions and sends proactive, customisable advance alerts (5 to 60 minutes beforehand) before rain falls, ensuring clean clothes never get soaked.
+**Clothing Line** is a smart, hyper-local weather companion app designed specifically for people who line-dry their laundry outside. Users tap **"Hang Out"** when their wash goes on the line. The app monitors real-time meteorological conditions and sends proactive, customisable advance alerts (5 to 60 minutes beforehand) before rain falls, ensuring clean clothes never get soaked.
 
 ### Brand Tone & Aesthetic
 - **Vibe:** Fresh, whimsical, reliable, crisp, eco-conscious, and friendly.
@@ -56,16 +56,16 @@ Use these if you want to frame them inside your own custom CSS 3D phone mockups,
 | **Raw UI 0** | `file:///Volumes/Ex-Storage/Codeing/Mobile Apps/my-washing-is-out/screenshots/image0.png`<br>`screenshots/image0.png` | Active drying session screen with animated clothesline, "Bring In" button, and current conditions. |
 | **Raw UI 1** | `file:///Volumes/Ex-Storage/Codeing/Mobile Apps/my-washing-is-out/screenshots/image1.png`<br>`screenshots/image1.png` | Detailed weather view showing hourly forecast, rain chance graph, humidity, and wind speed. |
 | **Raw UI 2** | `file:///Volumes/Ex-Storage/Codeing/Mobile Apps/my-washing-is-out/screenshots/image2.png`<br>`screenshots/image2.png` | Alert lead-time settings modal (5 min up to 60 min slider/selector). |
-| **Raw Widget** | `file:///Volumes/Ex-Storage/Codeing/Mobile Apps/my-washing-is-out/screenshots/widget-image.png`<br>`screenshots/widget-image.png` | iOS Home Screen showcasing the medium and small "My Washing Is Out" widgets alongside weather alerts. |
+| **Raw Widget** | `file:///Volumes/Ex-Storage/Codeing/Mobile Apps/my-washing-is-out/screenshots/widget-image.png`<br>`screenshots/widget-image.png` | iOS Home Screen showcasing the medium and small "Clothing Line" widgets alongside weather alerts. |
 
 ---
 
 ## 3. Web Page Copy & Content Structure
 
 ### A. Meta & SEO Tags
-- **Page Title:** `My Washing Is Out — Smart Rain Alerts for Outside Laundry`
-- **Meta Description:** `Never let a sudden rain shower soak your laundry again. My Washing Is Out monitors hyper-local weather and gives you advance rain alerts before the first drop falls.`
-- **OpenGraph Title:** `My Washing Is Out — Never Get Caught by Sudden Rain Again`
+- **Page Title:** `Clothing Line — Smart Rain Alerts for Outside Laundry`
+- **Meta Description:** `Never let a sudden rain shower soak your laundry again. Clothing Line monitors hyper-local weather and gives you advance rain alerts before the first drop falls.`
+- **OpenGraph Title:** `Clothing Line — Never Get Caught by Sudden Rain Again`
 - **OpenGraph Description:** `Hang your washing out and relax. Hyper-local rain alerts, custom warning buffers, and iOS widgets for peace of mind.`
 
 ---
@@ -73,7 +73,7 @@ Use these if you want to frame them inside your own custom CSS 3D phone mockups,
 ### B. Hero Section
 - **Kicker / Badge:** `☀️ Smart Weather for Smart Air-Drying`
 - **Headline (H1):** `Never let a sudden shower soak your fresh laundry again.`
-- **Subheadline:** `Whether you dry on a balcony, rotary airer, or garden clothesline, My Washing Is Out tracks hyper-local skies and sends you advance rain warnings before the downpour begins.`
+- **Subheadline:** `Whether you dry on a balcony, rotary airer, or garden clothesline, Clothing Line tracks hyper-local skies and sends you advance rain warnings before the downpour begins.`
 - **Call-To-Actions (CTAs):**
   - Primary: `Download on the App Store` (Black badge button with Apple logo, links to App Store URL placeholder: `https://apps.apple.com/app/id[APP_ID]`)
   - Secondary: `See How It Works ↓` (Smooth scroll to features)
