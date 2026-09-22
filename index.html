@@ -3,191 +3,732 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deviant Dev</title>
+    <title>Deviant Dev — Independent Developer Studio & Tooling Lab</title>
+    <meta name="description" content="Deviant Dev crafts high-performance developer tools, native iOS apps, and AI-powered platforms that challenge conventional software.">
+    <meta name="keywords" content="Deviant Dev, developer tools, SwaggerEditor, OpenAPI 3.0, Monaco Editor, Tech Radar, AI Mind Map, iOS apps">
+    <meta property="og:title" content="Deviant Dev — Independent Developer Studio & Tooling Lab">
+    <meta property="og:description" content="High-performance developer tools, native iOS apps, and AI-powered platforms that challenge conventional software.">
+    <meta property="og:image" content="Dlogo.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="Dlogomin.png">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Header -->
     <header>
         <nav>
-            <img src="Dlogomin.png" alt="Deviant Dev Logo" class="logo">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="brand-wrapper" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <img src="Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+                <div class="brand-title">
+                    Deviant Dev
+                    <span class="brand-badge">STUDIO</span>
+                </div>
+            </div>
+
+            <div class="nav-links-wrapper">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#capabilities">Capabilities</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="btn-github-nav">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#capabilities">Capabilities</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+    </div>
+
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <img src="Dlogo.png" alt="Deviant Dev" class="hero-logo">
-                <h1>Deviant Dev</h1>
-                <p>Innovative applications that break the mold</p>
-                <button class="cta-button" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Explore Products</button>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="about-content">
-                <h2>About Deviant Dev</h2>
-                <p class="about-lead">We create cutting-edge applications that challenge conventional thinking and deliver exceptional user experiences.</p>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">3+</div>
-                        <div class="stat-label">Active Products</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Innovation Focus</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">∞</div>
-                        <div class="stat-label">Possibilities</div>
-                    </div>
+                <div class="pill-badge">
+                    <span class="dot"></span>
+                    <span>Independent Engineering Studio &amp; Tooling Lab</span>
                 </div>
-            </div>
-        </section>
-
-        <section class="services">
-            <div class="services-content">
-                <h2>What We Do</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-code"></i></div>
-                        <h3>Full-Stack Development</h3>
-                        <p>Modern web applications built with React, Node.js, and cutting-edge technologies for optimal performance and user experience.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-robot"></i></div>
-                        <h3>AI Integration</h3>
-                        <p>Intelligent applications powered by artificial intelligence, machine learning, and natural language processing capabilities.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                        <h3>Cross-Platform Solutions</h3>
-                        <p>Responsive applications that work seamlessly across desktop, tablet, and mobile devices with consistent user experiences.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-tools"></i></div>
-                        <h3>Developer Tools</h3>
-                        <p>Professional tools and platforms designed to enhance developer productivity and streamline development workflows.</p>
-                    </div>
+                <h1>
+                    Building Developer Tools &amp; AI Apps <span class="highlight">That Break The Mold</span>
+                </h1>
+                <p>
+                    We design and build high-performance developer tools, native iOS applications, and AI-powered platforms engineered for developers who value precision, speed, and craft.
+                </p>
+                <div class="hero-actions">
+                    <button class="cta-button primary" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+                        <span>Explore Products</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="cta-button secondary">
+                        <i class="fab fa-github"></i>
+                        <span>View GitHub Studio</span>
+                    </a>
                 </div>
-            </div>
-        </section>
 
-        <section class="testimonials">
-            <div class="testimonials-content">
-                <h2>What People Say</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Deviant Dev's applications are truly innovative. The AI Mind Map tool has revolutionized how our team brainstorms and organizes ideas."</p>
+                <!-- Interactive Hero Product Showcase Frame -->
+                <div class="hero-showcase">
+                    <div class="showcase-header">
+                        <div class="window-dots">
+                            <span class="dot-red"></span>
+                            <span class="dot-yellow"></span>
+                            <span class="dot-green"></span>
                         </div>
-                        <div class="testimonial-author">
-                            <div class="author-info">
-                                <h4>Sarah Johnson</h4>
-                                <span>Product Manager, TechCorp</span>
+                        <div class="showcase-tabs">
+                            <button class="showcase-tab active" data-target="tab-swagger">SwaggerEditor</button>
+                            <button class="showcase-tab" data-target="tab-techradar">Tech Radar</button>
+                            <button class="showcase-tab" data-target="tab-aimindmap">AI Mind Map</button>
+                        </div>
+                        <div class="showcase-meta">
+                            <span class="status-indicator">●</span>
+                            <span>v3.0 Engine Active</span>
+                        </div>
+                    </div>
+
+                    <div class="showcase-body">
+                        <!-- Tab 1: SwaggerEditor Preview -->
+                        <div id="tab-swagger" class="tab-pane active">
+                            <div class="code-preview-grid">
+                                <div class="code-col">
+                                    <span class="code-label">// OpenAPI 3.0 Spec • Monaco Live Validator</span>
+                                    <code>
+                                        <span class="kw">openapi</span>: <span class="str">"3.0.3"</span><br>
+                                        <span class="prop">info</span>:<br>
+                                        &nbsp;&nbsp;<span class="prop">title</span>: <span class="str">"Deviant Cloud API"</span><br>
+                                        &nbsp;&nbsp;<span class="prop">version</span>: <span class="str">"2.4.0"</span><br>
+                                        <span class="prop">paths</span>:<br>
+                                        &nbsp;&nbsp;<span class="prop">/v1/workspaces</span>:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">get</span>:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">summary</span>: <span class="str">"List active environments"</span><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">responses</span>:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">200</span>: <span class="comment">{ $ref: '#/components/schemas/Workspace' }</span>
+                                    </code>
+                                </div>
+                                <div class="preview-col">
+                                    <div>
+                                        <div class="preview-badge-row">
+                                            <span class="badge-tag"><i class="fas fa-check-circle" style="color: #10b981;"></i> Spec Valid</span>
+                                            <span class="badge-tag">Monaco Core</span>
+                                            <span class="badge-tag">6 Viewers</span>
+                                        </div>
+                                        <div class="preview-title">Monaco-Powered OpenAPI Editor</div>
+                                        <div class="preview-desc">
+                                            Write OpenAPI specs with real-time linting, multi-viewer live preview (Swagger UI, Redoc, Deviant Viewer), and custom rule enforcement.
+                                        </div>
+                                    </div>
+                                    <div class="preview-actions">
+                                        <a href="swaggereditor.html" class="preview-btn cta-button primary">
+                                            <span>Product Details</span>
+                                            <i class="fas fa-arrow-right"></i>
+                                        </a>
+                                        <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="preview-btn cta-button secondary">
+                                            <i class="fab fa-github"></i>
+                                            <span>Repository</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 2: Tech Radar Preview -->
+                        <div id="tab-techradar" class="tab-pane">
+                            <div class="code-preview-grid">
+                                <div class="code-col">
+                                    <span class="code-label">// Enterprise Radar Matrix • Live Quadrants</span>
+                                    <code>
+                                        <span class="comment">// Quadrant Evaluation Pipeline</span><br>
+                                        <span class="kw">const</span> <span class="prop">radarRings</span> = [<br>
+                                        &nbsp;&nbsp;{ <span class="prop">name</span>: <span class="str">"ADOPT"</span>, <span class="prop">confidence</span>: <span class="val">0.98</span> },<br>
+                                        &nbsp;&nbsp;{ <span class="prop">name</span>: <span class="str">"TRIAL"</span>, <span class="prop">confidence</span>: <span class="val">0.82</span> },<br>
+                                        &nbsp;&nbsp;{ <span class="prop">name</span>: <span class="str">"ASSESS"</span>, <span class="prop">confidence</span>: <span class="val">0.65</span> },<br>
+                                        &nbsp;&nbsp;{ <span class="prop">name</span>: <span class="str">"HOLD"</span>, <span class="prop">riskFactor</span>: <span class="val">"High"</span> }<br>
+                                        ];<br>
+                                        <span class="kw">await</span> <span class="prop">radar</span>.<span class="prop">computeAiInsights</span>(blips);
+                                    </code>
+                                </div>
+                                <div class="preview-col">
+                                    <div>
+                                        <div class="preview-badge-row">
+                                            <span class="badge-tag"><i class="fas fa-satellite-dish" style="color: #38bdf8;"></i> 2D / 3D Canvas</span>
+                                            <span class="badge-tag">AI Categorization</span>
+                                            <span class="badge-tag">Azure SSO</span>
+                                        </div>
+                                        <div class="preview-title">Enterprise Technology Radar</div>
+                                        <div class="preview-desc">
+                                            Manage strategic engineering landscapes with interactive multi-dimensional radar visualizations and automated AI technology assessments.
+                                        </div>
+                                    </div>
+                                    <div class="preview-actions">
+                                        <a href="techradar.html" class="preview-btn cta-button primary">
+                                            <span>Product Details</span>
+                                            <i class="fas fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 3: AI Mind Map Preview -->
+                        <div id="tab-aimindmap" class="tab-pane">
+                            <div class="code-preview-grid">
+                                <div class="code-col">
+                                    <span class="code-label">// Generative Graph Simulation • D3 Engine</span>
+                                    <code>
+                                        <span class="comment">// Prompt Decomposition -> Node Graph</span><br>
+                                        <span class="kw">const</span> <span class="prop">prompt</span> = <span class="str">"Distributed consensus protocols"</span>;<br>
+                                        <span class="kw">const</span> <span class="prop">branches</span> = <span class="kw">await</span> <span class="prop">aiMind</span>.<span class="prop">expandNode</span>({<br>
+                                        &nbsp;&nbsp;<span class="prop">root</span>: <span class="str">"Raft &amp; Paxos Algorithms"</span>,<br>
+                                        &nbsp;&nbsp;<span class="prop">depth</span>: <span class="val">3</span>,<br>
+                                        &nbsp;&nbsp;<span class="prop">layout</span>: <span class="str">"force-directed-radial"</span><br>
+                                        });<br>
+                                        <span class="comment">// Output: 24 connected visual vertices</span>
+                                    </code>
+                                </div>
+                                <div class="preview-col">
+                                    <div>
+                                        <div class="preview-badge-row">
+                                            <span class="badge-tag"><i class="fas fa-brain" style="color: #c084fc;"></i> D3 Force Graph</span>
+                                            <span class="badge-tag">OpenAI Engine</span>
+                                            <span class="badge-tag">Live Canvas</span>
+                                        </div>
+                                        <div class="preview-title">AI Mind Map Visualizer</div>
+                                        <div class="preview-desc">
+                                            Transform raw thoughts and complex subjects into fully interactive, expanding visual mind maps in seconds using generative intelligence.
+                                        </div>
+                                    </div>
+                                    <div class="preview-actions">
+                                        <a href="aimindmap.html" class="preview-btn cta-button primary">
+                                            <span>Product Details</span>
+                                            <i class="fas fa-arrow-right"></i>
+                                        </a>
+                                        <a href="https://aimindmap.deviantdev.co.uk/" target="_blank" rel="noopener noreferrer" class="preview-btn cta-button secondary">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            <span>Launch App</span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"The OpenAPI Editor is a game-changer for our development workflow. It's intuitive, powerful, and saves us hours of work."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-info">
-                                <h4>Michael Chen</h4>
-                                <span>Lead Developer, StartupXYZ</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metrics Strip -->
+        <div class="metrics-strip">
+            <div class="metric-item">
+                <div class="metric-value">6+</div>
+                <div class="metric-label">Shipped Applications</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-value">100%</div>
+                <div class="metric-label">Native &amp; Full-Stack</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-value">Open</div>
+                <div class="metric-label">Source &amp; Cloud Tools</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-value">Fast</div>
+                <div class="metric-label">Performance First</div>
+            </div>
+        </div>
+
+        <!-- Products Bento Grid Section -->
+        <section id="products" class="section-wrapper">
+            <div class="section-header">
+                <div class="pill-badge">
+                    <span>ENGINEERED SOFTWARE CATALOGUE</span>
+                </div>
+                <h2>Built for Scale, Craft &amp; Speed</h2>
+                <p>
+                    Every application in the Deviant Dev portfolio is engineered to solve acute developer and user workflows with zero compromise on ergonomics.
+                </p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Flagship Card: SwaggerEditor -->
+                <div class="bento-card col-8">
+                    <div>
+                        <div class="bento-card-top">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-code"></i>
                             </div>
+                            <span class="card-status-pill live">● FLAGSHIP WEB APP</span>
+                        </div>
+                        <h3>SwaggerEditor</h3>
+                        <p>
+                            Modern OpenAPI 3.0 editor built with React and the VS Code Monaco editor core. Features real-time AST linting, custom JavaScript rule creation, 6 documentation preview engines, and team role-based permissions.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React 18</span>
+                            <span class="tech-tag">Monaco Editor</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">OpenAPI 3.0</span>
+                            <span class="tech-tag">SQLite / Postgres</span>
+                        </div>
+                        <div class="card-preview-thumb">
+                            <img src="SwagerEditor/main screen.png" alt="SwaggerEditor Interface Preview" loading="lazy">
                         </div>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Professional, innovative, and user-focused. Deviant Dev consistently delivers applications that exceed expectations."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-info">
-                                <h4>Emily Rodriguez</h4>
-                                <span>CTO, InnovateLab</span>
+                    <div class="card-footer-action">
+                        <a href="swaggereditor.html" class="card-link">
+                            <span>Explore SwaggerEditor deep dive</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <span style="font-size: 0.8rem; color: var(--text-subtle); font-family: var(--font-mono);">Open Source Ready</span>
+                    </div>
+                </div>
+
+                <!-- Bento Card: Tech Radar -->
+                <div class="bento-card col-4">
+                    <div>
+                        <div class="bento-card-top">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-satellite-dish"></i>
                             </div>
+                            <span class="card-status-pill">ENTERPRISE</span>
+                        </div>
+                        <h3>Tech Radar</h3>
+                        <p>
+                            Enterprise technology radar platform providing AI-powered insights, real-time WebSocket collaboration, and strategic quadrant analytics for software leadership.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">AI/ML Insights</span>
+                        </div>
+                    </div>
+                    <div class="card-footer-action">
+                        <a href="techradar.html" class="card-link">
+                            <span>View Radar Platform</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bento Card: My Washing Is Out -->
+                <div class="bento-card col-6">
+                    <div>
+                        <div class="bento-card-top">
+                            <div class="card-icon-badge" style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.3); color: #38bdf8;">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <span class="card-status-pill live" style="background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.3); color: #38bdf8;">● NEW • IOS COMPANION</span>
+                        </div>
+                        <h3>My Washing Is Out</h3>
+                        <p>
+                            Smart, hyper-local weather companion app designed specifically for line-drying laundry. Monitors real-time precipitation and sends proactive advance alerts (5 to 60 mins) before sudden rain falls.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">iOS 17+</span>
+                            <span class="tech-tag">Apple WeatherKit</span>
+                            <span class="tech-tag">WidgetKit</span>
+                            <span class="tech-tag">Watch Companion</span>
+                            <span class="tech-tag">SwiftUI</span>
+                        </div>
+                        <div class="card-preview-thumb">
+                            <img src="assets/my-washing-is-out/appstore_image0.png" alt="My Washing Is Out Preview" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-footer-action">
+                        <a href="my-washing-is-out.html" class="card-link" style="color: #38bdf8;">
+                            <span>Explore App Showcase</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <span style="font-size: 0.8rem; color: var(--text-subtle); font-family: var(--font-mono);">App Store Ready</span>
+                    </div>
+                </div>
+
+                <!-- Bento Card: AI Mind Map -->
+                <div class="bento-card col-6">
+                    <div>
+                        <div class="bento-card-top">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <span class="card-status-pill live">● LIVE PLATFORM</span>
+                        </div>
+                        <h3>AI Mind Map</h3>
+                        <p>
+                            Transforms complex prompts and concepts into interactive, force-directed visual mind maps in real time using OpenAI models and high-performance D3.js rendering.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">SVG Canvas</span>
+                        </div>
+                    </div>
+                    <div class="card-footer-action">
+                        <a href="aimindmap.html" class="card-link">
+                            <span>View Features</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="https://aimindmap.deviantdev.co.uk/" target="_blank" rel="noopener noreferrer" class="card-link" style="color: var(--accent-cyan);">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bento Card: DIY AI -->
+                <div class="bento-card col-4">
+                    <div>
+                        <div class="bento-card-top">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-hammer"></i>
+                            </div>
+                            <span class="card-status-pill ios">IOS APP</span>
+                        </div>
+                        <h3>DIY AI Assistant</h3>
+                        <p>
+                            Intelligent iOS home improvement companion featuring natural voice interaction, step-by-step repair guidance, project estimation, and diagnostic assistance.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">iOS Swift</span>
+                            <span class="tech-tag">Voice AI</span>
+                            <span class="tech-tag">CoreML</span>
+                            <span class="tech-tag">SwiftUI</span>
+                        </div>
+                    </div>
+                    <div class="card-footer-action">
+                        <a href="diy-ai.html" class="card-link">
+                            <span>View iOS App</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bento Card: Clean It AI -->
+                <div class="bento-card col-4">
+                    <div>
+                        <div class="bento-card-top">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-broom"></i>
+                            </div>
+                            <span class="card-status-pill ios">IOS APP</span>
+                        </div>
+                        <h3>Clean It AI</h3>
+                        <p>
+                            AI-driven household maintenance scheduling assistant that curates customized recurring cleaning routines, checklists, and preventative home care advice.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">iOS Swift</span>
+                            <span class="tech-tag">Smart Scheduling</span>
+                            <span class="tech-tag">CoreData</span>
+                            <span class="tech-tag">Notifications</span>
+                        </div>
+                    </div>
+                    <div class="card-footer-action">
+                        <a href="clean-it-ai.html" class="card-link">
+                            <span>View iOS App</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bento Card: Shoe Shop Architecture Reference -->
+                <div class="bento-card col-4">
+                    <div>
+                        <div class="bento-card-top">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <span class="card-status-pill">E-COMMERCE ARCHITECTURE</span>
+                        </div>
+                        <h3>Shoe Shop Platform</h3>
+                        <p>
+                            A robust modern e-commerce reference application featuring persistent shopping carts, JWT authentication, product catalog filtering, and transactional API workflows.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">JWT Auth</span>
+                        </div>
+                    </div>
+                    <div class="card-footer-action">
+                        <a href="shoeshop.html" class="card-link">
+                            <span>View Platform</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Capabilities & Pillars Section -->
+        <section id="capabilities" class="section-wrapper">
+            <div class="section-header">
+                <div class="pill-badge">
+                    <span>CORE DISCIPLINES</span>
+                </div>
+                <h2>Engineered with Precision</h2>
+                <p>
+                    From specialized browser-based IDEs to native mobile runtimes, our architecture principles emphasize speed, resilience, and developer joy.
+                </p>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <i class="fas fa-code-branch pillar-icon"></i>
+                    <h3>Developer Tooling &amp; Monaco</h3>
+                    <p>
+                        Designing high-performance in-browser editors with Monaco, Web Workers for non-blocking syntax validation, AST analysis, and custom linting logic.
+                    </p>
+                </div>
+                <div class="pillar-card">
+                    <i class="fas fa-robot pillar-icon"></i>
+                    <h3>AI Pipelines &amp; Workflows</h3>
+                    <p>
+                        Integrating modern LLM APIs, structured JSON schemas, multimodal image/audio reasoning, and force-directed graph generation into reactive applications.
+                    </p>
+                </div>
+                <div class="pillar-card">
+                    <i class="fab fa-apple pillar-icon"></i>
+                    <h3>Native iOS &amp; Swift</h3>
+                    <p>
+                        Crafting fluid native iOS apps using SwiftUI, Combine, voice processing, and on-device storage for frictionless consumer utility.
+                    </p>
+                </div>
+                <div class="pillar-card">
+                    <i class="fas fa-shield-halved pillar-icon"></i>
+                    <h3>Enterprise DX &amp; APIs</h3>
+                    <p>
+                        Implementing OAuth 2.0, SSO protocols (Azure AD/Okta), OpenAPI specifications, and clean microservices that scale effortlessly.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Studio Section -->
+        <section id="about" class="section-wrapper">
+            <div class="about-studio">
+                <div class="about-inner">
+                    <div class="about-narrative">
+                        <div class="pill-badge">
+                            <span>STUDIO PHILOSOPHY</span>
+                        </div>
+                        <h2>Software That Dares to Deviate</h2>
+                        <p>
+                            Deviant Dev is an independent engineering lab dedicated to building software that refuses to settle for generic templates or bloated architectures.
+                        </p>
+                        <p>
+                            Whether building developer tooling used by thousands of API engineers or responsive mobile assistants powered by intelligence, our mission is straightforward: craft software that feels remarkably fast, intuitive, and enduring.
+                        </p>
+                        <ul class="philosophy-list">
+                            <li class="philosophy-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Zero-bloat dependencies with emphasis on native browser and OS capabilities.</span>
+                            </li>
+                            <li class="philosophy-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Opinionated ergonomics designed specifically for technical users and developers.</span>
+                            </li>
+                            <li class="philosophy-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Continuous innovation bridging generative AI with rock-solid data visualization.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="about-specs-card">
+                        <div class="spec-row">
+                            <span class="spec-key">STUDIO_ORIGIN</span>
+                            <span class="spec-val">United Kingdom</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-key">PRIMARY_FOCUS</span>
+                            <span class="spec-val">DevTools &amp; AI Applications</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-key">CORE_LANGUAGES</span>
+                            <span class="spec-val">TypeScript, Swift, Node.js</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-key">STANDARDS</span>
+                            <span class="spec-val">OpenAPI 3.0, W3C, WCAG 2.1</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-key">DEPLOYMENT</span>
+                            <span class="spec-val">GitHub Pages, Cloudflare, Docker</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-key">STATUS</span>
+                            <span class="spec-val" style="color: #34d399;">Active • Shipping New Tools</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="products" class="products">
-            <h2>Our Products</h2>
-            <div class="product-grid">
-                <div class="product-card" onclick="window.location.href='swaggereditor.html'" style="cursor: pointer;">
-                    <div class="card-icon"><i class="fas fa-code"></i></div>
-                    <h3>SwaggerEditor</h3>
-                    <p>Modern OpenAPI 3.0 editor designed for developers who demand speed, precision, and collaboration.</p>
-                    <div class="tech-stack">
-                        <span class="tech">React 18</span>
-                        <span class="tech">Monaco Editor</span>
-                        <span class="tech">Express.js</span>
+        <!-- Testimonials Section -->
+        <section class="section-wrapper">
+            <div class="section-header">
+                <div class="pill-badge">
+                    <span>DEVELOPER FEEDBACK</span>
+                </div>
+                <h2>What Engineers &amp; Leaders Say</h2>
+                <p>Real feedback from engineers and teams leveraging Deviant Dev tools in their day-to-day workflows.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "The SwaggerEditor experience is exceptional. Monaco autocomplete combined with instant schema validation and multi-viewer previews cut our API design cycle in half."
+                    </p>
+                    <div class="author-wrapper">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <span>Lead API Architect</span>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card" onclick="window.location.href='shoeshop.html'" style="cursor: pointer;">
-                    <div class="card-icon"><i class="fas fa-shopping-bag"></i></div>
-                    <h3>Shoe Shop</h3>
-                    <p>Modern e-commerce platform with React frontend and Node.js backend for seamless shopping experience</p>
-                    <div class="tech-stack">
-                        <span class="tech">React</span>
-                        <span class="tech">Node.js</span>
-                        <span class="tech">MongoDB</span>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "AI Mind Map transformed how we conduct technical brainstorming. The prompt expansion into interactive D3 node trees makes complex system design instant."
+                    </p>
+                    <div class="author-wrapper">
+                        <div class="author-avatar">SJ</div>
+                        <div class="author-info">
+                            <h4>Sarah Jenkins</h4>
+                            <span>Product Lead</span>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card" onclick="window.location.href='aimindmap.html'" style="cursor: pointer;">
-                    <div class="card-icon"><i class="fas fa-brain"></i></div>
-                    <h3>AI Mind Map</h3>
-                    <p>AI-powered mind mapping tool that transforms your ideas into visual, interactive mind maps instantly</p>
-                    <div class="tech-stack">
-                        <span class="tech">React</span>
-                        <span class="tech">OpenAI API</span>
-                        <span class="tech">D3.js</span>
-                    </div>
-                </div>
-                <div class="product-card" onclick="window.location.href='diy-ai.html'" style="cursor: pointer;">
-                    <div class="card-icon"><i class="fas fa-hammer"></i></div>
-                    <h3>DIY AI</h3>
-                    <p>Your intelligent home improvement assistant with voice input, AI guidance, and step-by-step tutorials</p>
-                    <div class="tech-stack">
-                        <span class="tech">iOS App</span>
-                        <span class="tech">AI Assistant</span>
-                        <span class="tech">Voice Input</span>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "Deviant Dev approaches software with a high standard of craft. You can tell every pixel, keyboard shortcut, and response latency was obsessively tuned."
+                    </p>
+                    <div class="author-wrapper">
+                        <div class="author-avatar">ER</div>
+                        <div class="author-info">
+                            <h4>Emily Rodriguez</h4>
+                            <span>VP of Engineering</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="cta-section">
-            <div class="cta-content">
-                <h2>Ready to Build Something Amazing?</h2>
-                <p>Let's collaborate and create innovative solutions that make a difference.</p>
-                <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Get In Touch</h2>
-            <p>Ready to collaborate? Let's build something amazing together.</p>
-            <div class="contact-links">
-                <a href="#" class="contact-link"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="mailto:info@deviantdev.co.uk" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
+        <!-- Contact & CTA Banner -->
+        <section id="contact" class="section-wrapper">
+            <div class="cta-banner">
+                <div class="pill-badge" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2);">
+                    <span>COLLABORATE &amp; CONNECT</span>
+                </div>
+                <h2>Ready to Build Something Extraordinary?</h2>
+                <p>
+                    Whether you are looking to integrate specialized developer tooling, deploy AI architectures, or explore open-source collaborations, let's talk.
+                </p>
+                <div class="contact-options">
+                    <button class="email-copy-btn" data-email="info@deviantdev.co.uk">
+                        <i class="far fa-copy"></i>
+                        <span>Copy info@deviantdev.co.uk</span>
+                    </button>
+                    <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="cta-button secondary">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub Profile</span>
+                    </a>
+                    <a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer" class="cta-button secondary">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Deviant Dev. All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="brand-wrapper" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <img src="Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+                    <div class="brand-title">Deviant Dev</div>
+                </div>
+                <p>
+                    Independent engineering studio building developer tools, AI applications, and native mobile software that challenge convention.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Products</h5>
+                <ul>
+                    <li><a href="my-washing-is-out.html">My Washing Is Out</a></li>
+                    <li><a href="swaggereditor.html">SwaggerEditor</a></li>
+                    <li><a href="techradar.html">Tech Radar</a></li>
+                    <li><a href="aimindmap.html">AI Mind Map</a></li>
+                    <li><a href="diy-ai.html">DIY AI Assistant</a></li>
+                    <li><a href="clean-it-ai.html">Clean It AI</a></li>
+                    <li><a href="shoeshop.html">Shoe Shop</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Pages</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#capabilities">Capabilities</a></li>
+                    <li><a href="#about">About Studio</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Connect</h5>
+                <ul>
+                    <li><a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="mailto:info@deviantdev.co.uk">Email Support</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; 2025 Deviant Dev. All rights reserved.</div>
+            <div class="social-links">
+                <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:info@deviantdev.co.uk" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <!-- Image Lightbox Modal Container -->
+    <div class="image-modal" role="dialog" aria-modal="true" aria-label="Image Preview">
+        <button class="modal-close" aria-label="Close Preview">&times;</button>
+        <img class="modal-content" src="" alt="Screenshot Full View">
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

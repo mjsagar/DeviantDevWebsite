@@ -3,122 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoe Shop - Modern E-commerce Platform</title>
+    <title>Shoe Shop — Modern Full-Stack E-Commerce Architecture Reference</title>
+    <meta name="description" content="A modern, full-stack e-commerce architecture reference built with React, Node.js, Express, and MongoDB.">
+    <link rel="icon" type="image/png" href="Dlogomin.png">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav>
-            <img src="Dlogomin.png" alt="Deviant Dev Logo" class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#products">Products</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
+            <div class="brand-wrapper" onclick="window.location.href='index.html'">
+                <img src="Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+                <div class="brand-title">
+                    Deviant Dev
+                    <span class="brand-badge">ARCHITECTURE</span>
+                </div>
+            </div>
+
+            <div class="nav-links-wrapper">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#capabilities">Capabilities</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="btn-github-nav">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#capabilities">Capabilities</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+    </div>
+
     <main>
+        <!-- Product Hero -->
         <section class="product-hero">
             <div class="hero-content">
-                <h1>Shoe Shop E-commerce Platform</h1>
-                <p>A modern, full-stack e-commerce solution built with React and Node.js for seamless online shopping experiences.</p>
+                <div class="pill-badge">
+                    <span class="dot"></span>
+                    <span>FULL-STACK REFERENCE ARCHITECTURE</span>
+                </div>
+                <h1>Shoe Shop E-Commerce Platform</h1>
+                <p>
+                    A battle-tested full-stack web application demonstrating production-grade React client patterns, Express API design, persistent cart synchronizations, and secure JWT authentication.
+                </p>
                 <div class="cta-buttons">
-                    <button class="cta-button primary" onclick="window.open('https://github.com/mjsagar/shoeShop', '_blank')">View Code</button>
+                    <a href="https://github.com/mjsagar/shoeShop" target="_blank" rel="noopener noreferrer" class="cta-button primary">
+                        <i class="fab fa-github"></i>
+                        <span>View on GitHub</span>
+                    </a>
+                    <a href="#features" class="cta-button secondary">
+                        <span>Explore Specs</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="features">
+        <!-- Features Grid -->
+        <section id="features" class="features">
             <div class="container">
-                <h2>Key Features</h2>
+                <div class="section-header">
+                    <div class="pill-badge"><span>SYSTEM FEATURES</span></div>
+                    <h2>Core Capabilities</h2>
+                    <p>Designed as a clean architectural blueprint for transactional retail applications.</p>
+                </div>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-shopping-cart"></i></div>
-                        <h3>Shopping Cart</h3>
-                        <p>Full-featured shopping cart with add, remove, and quantity management. Persistent cart state across sessions.</p>
+                        <div class="feature-icon"><i class="fas fa-cart-shopping"></i></div>
+                        <h3>Persistent Shopping Cart</h3>
+                        <p>Real-time cart state synchronization across sessions with client-side optimistic UI updates and server validation.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-user-circle"></i></div>
-                        <h3>User Authentication</h3>
-                        <p>Secure user registration and login system with JWT tokens and protected routes for personalized experiences.</p>
+                        <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                        <h3>JWT Authentication</h3>
+                        <p>Cryptographically signed JSON Web Token auth with protected routes, refresh tokens, and password hashing.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-search"></i></div>
-                        <h3>Product Search & Filter</h3>
-                        <p>Advanced search functionality with category filters, price ranges, and sorting options for easy product discovery.</p>
+                        <div class="feature-icon"><i class="fas fa-filter"></i></div>
+                        <h3>Catalog &amp; Faceted Filtering</h3>
+                        <p>High-speed product catalog indexing with dynamic category, price range, sizing, and multi-parameter filtering.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon"><i class="fas fa-credit-card"></i></div>
-                        <h3>Payment Integration</h3>
-                        <p>Secure payment processing with multiple payment methods and order confirmation system.</p>
+                        <h3>Payment &amp; Order Pipeline</h3>
+                        <p>Complete checkout state machine handling order creation, status verification, and inventory decrement logic.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
-                        <h3>Responsive Design</h3>
-                        <p>Mobile-first responsive design ensuring optimal shopping experience across all devices and screen sizes.</p>
+                        <div class="feature-icon"><i class="fas fa-mobile-screen"></i></div>
+                        <h3>Mobile-First Responsive</h3>
+                        <p>Engineered for high performance and smooth touch transitions across smartphones, tablets, and desktops.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-cogs"></i></div>
-                        <h3>Admin Dashboard</h3>
-                        <p>Comprehensive admin panel for product management, order tracking, and inventory control.</p>
+                        <div class="feature-icon"><i class="fas fa-sliders"></i></div>
+                        <h3>Admin Management Panel</h3>
+                        <p>Administrative portal for real-time inventory adjustments, order dispatch tracking, and product catalog curation.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Tech Specs -->
         <section class="tech-specs">
             <div class="container">
-                <h2>Technical Specifications</h2>
+                <div class="section-header">
+                    <div class="pill-badge"><span>STACK SPECIFICATIONS</span></div>
+                    <h2>Technical Architecture</h2>
+                    <p>Built using standard, dependable JavaScript ecosystem libraries.</p>
+                </div>
                 <div class="tech-grid">
                     <div class="tech-category">
                         <h3>Frontend</h3>
                         <ul>
-                            <li>React.js</li>
-                            <li>React Router</li>
-                            <li>Redux/Context API</li>
-                            <li>CSS3 & Responsive Design</li>
-                            <li>Axios for API calls</li>
+                            <li>React.js Architecture</li>
+                            <li>React Router Dom v6</li>
+                            <li>Redux &amp; Context State</li>
+                            <li>Axios Interceptor Layer</li>
+                            <li>Modern CSS3 Flex/Grid</li>
                         </ul>
                     </div>
                     <div class="tech-category">
                         <h3>Backend</h3>
                         <ul>
-                            <li>Node.js</li>
-                            <li>Express.js</li>
-                            <li>MongoDB</li>
-                            <li>JWT Authentication</li>
-                            <li>RESTful API</li>
+                            <li>Node.js Runtime</li>
+                            <li>Express.js REST APIs</li>
+                            <li>MongoDB Database</li>
+                            <li>Mongoose Schema Models</li>
+                            <li>JWT / Bcrypt Security</li>
                         </ul>
                     </div>
                     <div class="tech-category">
-                        <h3>Features</h3>
+                        <h3>Domain Workflows</h3>
                         <ul>
-                            <li>User Registration/Login</li>
-                            <li>Product Catalog</li>
-                            <li>Shopping Cart</li>
-                            <li>Order Management</li>
-                            <li>Admin Dashboard</li>
+                            <li>User Registration / Login</li>
+                            <li>Catalog Inventory Management</li>
+                            <li>Checkout State Machine</li>
+                            <li>Order History Tracking</li>
+                            <li>Protected Admin Endpoints</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- GitHub Banner -->
         <section class="github-info">
             <div class="container">
-                <h2>Open Source Project</h2>
                 <div class="github-card">
                     <div class="github-icon">
                         <i class="fab fa-github"></i>
                     </div>
                     <div class="github-content">
-                        <h3>Available on GitHub</h3>
-                        <p>This project is open source and available for learning, contribution, and collaboration. Explore the code, submit issues, or contribute to the development.</p>
-                        <a href="https://github.com/mjsagar/shoeShop" target="_blank" class="github-link">
-                            <i class="fab fa-github"></i> View Repository
+                        <h3>Explore the Full Source Code</h3>
+                        <p>
+                            Shoe Shop is open-source under the MIT license. Review the full codebase, inspect our architectural patterns, or fork and adapt it for your own projects.
+                        </p>
+                        <a href="https://github.com/mjsagar/shoeShop" target="_blank" rel="noopener noreferrer" class="github-link">
+                            <i class="fab fa-github"></i>
+                            <span>View GitHub Repository</span>
                         </a>
                     </div>
                 </div>
@@ -126,24 +191,61 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Deviant Dev. All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="brand-wrapper" onclick="window.location.href='index.html'">
+                    <img src="Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+                    <div class="brand-title">Deviant Dev</div>
+                </div>
+                <p>
+                    Independent engineering studio building developer tools, AI applications, and native mobile software that challenge convention.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Products</h5>
+                <ul>
+                    <li><a href="my-washing-is-out.html">My Washing Is Out</a></li>
+                    <li><a href="swaggereditor.html">SwaggerEditor</a></li>
+                    <li><a href="techradar.html">Tech Radar</a></li>
+                    <li><a href="aimindmap.html">AI Mind Map</a></li>
+                    <li><a href="diy-ai.html">DIY AI Assistant</a></li>
+                    <li><a href="clean-it-ai.html">Clean It AI</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#capabilities">Capabilities</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Connect</h5>
+                <ul>
+                    <li><a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="mailto:info@deviantdev.co.uk">Contact Studio</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; 2025 Deviant Dev. All rights reserved.</div>
+            <div class="social-links">
+                <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:info@deviantdev.co.uk" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </footer>
-    
-    <script>
-        // Smooth scrolling for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>

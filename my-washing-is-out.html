@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Washing Is Out — Smart Rain Alerts for Outside Laundry</title>
+    <meta name="description" content="Never let a sudden rain shower soak your laundry again. My Washing Is Out monitors hyper-local weather and gives you advance rain alerts before the first drop falls.">
+    <meta property="og:title" content="My Washing Is Out — Never Get Caught by Sudden Rain Again">
+    <meta property="og:description" content="Hang your washing out and relax. Hyper-local rain alerts, custom warning buffers, and iOS widgets for peace of mind.">
+    <meta property="og:image" content="assets/my-washing-is-out/app-icon.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="assets/my-washing-is-out/app-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="brand-wrapper" onclick="window.location.href='index.html'">
+                <img src="Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+                <div class="brand-title">
+                    Deviant Dev
+                    <span class="brand-badge" style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.35); color: #38bdf8;">IOS COMPANION</span>
+                </div>
+            </div>
+
+            <div class="nav-links-wrapper">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#capabilities">Capabilities</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="btn-github-nav">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#capabilities">Capabilities</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Product Hero -->
+        <section class="product-hero" style="padding-top: 8rem;">
+            <!-- Whimsical Animated Clothesline -->
+            <div class="clothesline-banner">
+                <div class="clothesline-rope"></div>
+                <div class="pegs-row">
+                    <div class="peg"></div>
+                    <div class="peg"></div>
+                    <div class="peg"></div>
+                    <div class="peg"></div>
+                    <div class="peg"></div>
+                    <div class="peg"></div>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <img src="assets/my-washing-is-out/app-icon.png" alt="My Washing Is Out App Icon" class="app-icon-squircle">
+                
+                <div class="pill-badge" style="background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.3); color: #7dd3fc;">
+                    <span class="dot" style="background-color: #38bdf8; box-shadow: 0 0 8px #38bdf8;"></span>
+                    <span>☀️ Smart Weather for Smart Air-Drying</span>
+                </div>
+                
+                <h1>Never let a sudden shower soak your fresh laundry again.</h1>
+                
+                <p>
+                    Whether you dry on a balcony, rotary airer, or garden clothesline, <strong>My Washing Is Out</strong> tracks hyper-local skies and sends you advance rain warnings before the downpour begins.
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="https://apps.apple.com/app/id[APP_ID]" target="_blank" rel="noopener noreferrer" class="cta-button primary" style="background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%); box-shadow: 0 4px 25px rgba(56, 189, 248, 0.4);">
+                        <i class="fab fa-apple"></i>
+                        <span>Download on the App Store</span>
+                    </a>
+                    <a href="#how-it-works" class="cta-button secondary">
+                        <span>See How It Works</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+
+                <!-- Hero Visual: Dual Mockups -->
+                <div class="hero-device-wrapper">
+                    <img src="assets/my-washing-is-out/appstore_image0.png" alt="My Washing Is Out - Active Drying Session" class="hero-phone-mockup screenshot-img" onclick="openModal('assets/my-washing-is-out/appstore_image0.png', 'Hang Out Laundry - Active Session')">
+                    <img src="assets/my-washing-is-out/appstore_widget.png" alt="My Washing Is Out - Glanceable iOS Widgets" class="hero-widget-mockup screenshot-img" onclick="openModal('assets/my-washing-is-out/appstore_widget.png', 'Glanceable iOS Widgets')">
+                </div>
+            </div>
+        </section>
+
+        <!-- Value Proposition: Frustration vs Solution -->
+        <section class="section-wrapper">
+            <div class="section-header">
+                <div class="pill-badge"><span>THE PROBLEM &amp; THE SOLUTION</span></div>
+                <h2>Stop Playing Russian Roulette With The Weather</h2>
+                <p>Save your clothes from surprise drizzles, reduce dryer bills, and dry outside with total confidence.</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-card frustration">
+                    <div>
+                        <span class="comparison-tag">THE FRUSTRATION</span>
+                        <h3>The Saturated Clothesline Dilemma</h3>
+                        <p>
+                            "You wash a big load of bedding and hang it in the sun. You head upstairs to work or pop out for coffee. An hour later, an unexpected drizzle drenches everything—forcing you to re-wash, waste energy, and lose hours of your weekend."
+                        </p>
+                    </div>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; color: #f43f5e; font-size: 0.85rem; font-family: var(--font-mono);">
+                        <i class="fas fa-cloud-showers-heavy"></i>
+                        <span>Unpredictable showers ruin fresh laundry</span>
+                    </div>
+                </div>
+
+                <div class="comparison-card solution">
+                    <div>
+                        <span class="comparison-tag">THE SOLUTION</span>
+                        <h3>One Tap. 100% Peace of Mind.</h3>
+                        <p>
+                            One tap on your iPhone or Apple Watch. Set your preferred alert window—say, 15 minutes before precipitation arrives. Go about your day with total confidence. If rain clouds gather over your garden, your phone warns you with ample time to bring your clothes inside.
+                        </p>
+                    </div>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; color: #38bdf8; font-size: 0.85rem; font-family: var(--font-mono);">
+                        <i class="fas fa-shield-sun"></i>
+                        <span>Hyper-local alerts before the first drop</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Features Grid -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="pill-badge"><span>BUILT FOR PEACE OF MIND</span></div>
+                    <h2>Engineered for British &amp; Global Skies</h2>
+                    <p>Every feature is crafted to make outdoor laundry effortless, reliable, and sustainable.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #38bdf8;"><i class="fas fa-shirt"></i></div>
+                        <h3>One-Tap Session Tracking</h3>
+                        <p>Tap "Hang Out" the moment your clothes hit the line. Tap "Bring In" when they're dry. No complicated setup, no fiddly menus, no stress.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #f59e0b;"><i class="fas fa-clock"></i></div>
+                        <h3>Custom Warning Buffer (5–60 Mins)</h3>
+                        <p>Pick the lead time that fits your life. Upstairs in a Zoom meeting? Set 20 minutes. Just a quick step onto the patio? 5 minutes is plenty.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #38bdf8;"><i class="fas fa-satellite-dish"></i></div>
+                        <h3>Hyper-Local Precision</h3>
+                        <p>Powered by high-resolution meteorological models tailored down to your exact garden coordinates, tracking rain intensity, probability, and wind speed.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #c084fc;"><i class="fas fa-table-cells-large"></i></div>
+                        <h3>Glanceable iOS Widgets</h3>
+                        <p>Keep an eye on your drying session, sky status, and rain countdown right from your iPhone Home Screen and Lock Screen without even opening the app.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #38bdf8;"><i class="fas fa-sun"></i></div>
+                        <h3>Dynamic Living Skies</h3>
+                        <p>The app's illustrated sky seamlessly shifts in real time to match the sunlight, cloud coverage, twilight, and impending fronts over your home.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #10b981;"><i class="fas fa-leaf"></i></div>
+                        <h3>Save Energy &amp; Money</h3>
+                        <p>Tumble dryers are among the most power-hungry appliances in the house. Confident outdoor drying dramatically cuts electricity bills and helps the planet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- "How It Works" 3 Simple Steps -->
+        <section id="how-it-works" class="section-wrapper">
+            <div class="section-header">
+                <div class="pill-badge"><span>THREE SIMPLE STEPS</span></div>
+                <h2>How It Works</h2>
+                <p>From pegs on the line to crisp dry sheets—zero guessing required.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-badge">1</div>
+                    <h3>Hang Out</h3>
+                    <p>Hang your laundry on the line and tap "Hang Out" in the app or directly from your iOS Home Screen widget.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-badge">2</div>
+                    <h3>Relax &amp; Live Your Day</h3>
+                    <p>Our hyper-local radar keeps a continuous, battery-friendly eye on incoming precipitation and cloud formations.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-badge">3</div>
+                    <h3>Beat the Rain</h3>
+                    <p>Receive a clear advance notification on your iPhone and Apple Watch with ample time to bring your clothes inside dry and fresh.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Store Screenshots Gallery -->
+        <section id="gallery" class="screenshots">
+            <div class="container">
+                <div class="section-header">
+                    <div class="pill-badge"><span>MARKETING &amp; UI SHOWCASE</span></div>
+                    <h2>App Store Preview Gallery</h2>
+                    <p>Click on any screenshot to view the full high-resolution interface.</p>
+                </div>
+                <div class="screenshot-grid">
+                    <div class="screenshot-item" onclick="openModal('assets/my-washing-is-out/appstore_image0.png', 'Hang Out Laundry - Active Session')">
+                        <img src="assets/my-washing-is-out/appstore_image0.png" alt="Hang Out Laundry" class="screenshot-img" loading="lazy">
+                        <h4>"Hang Out Laundry"</h4>
+                        <p>Clean &amp; Crisp — Tap Hang Out when your wash goes on the line. Hyper-local tracking begins immediately.</p>
+                    </div>
+                    <div class="screenshot-item" onclick="openModal('assets/my-washing-is-out/appstore_image1.png', 'Live Weather Radar & Forecast')">
+                        <img src="assets/my-washing-is-out/appstore_image1.png" alt="Live Weather Radar" class="screenshot-img" loading="lazy">
+                        <h4>"Live Weather Radar"</h4>
+                        <p>Sky &amp; Rain Alerts — Real-time rain forecasting, precipitation probability, hourly breakdown, and conditions.</p>
+                    </div>
+                    <div class="screenshot-item" onclick="openModal('assets/my-washing-is-out/appstore_image2.png', 'Custom Alert Lead-Time')">
+                        <img src="assets/my-washing-is-out/appstore_image2.png" alt="Custom Timing" class="screenshot-img" loading="lazy">
+                        <h4>"Custom Timing"</h4>
+                        <p>Tailored Alerts — Set your warning buffer (5 to 60 mins) to bring laundry in before it rains.</p>
+                    </div>
+                    <div class="screenshot-item" onclick="openModal('assets/my-washing-is-out/appstore_widget.png', 'Glanceable iOS Widgets')">
+                        <img src="assets/my-washing-is-out/appstore_widget.png" alt="Glanceable Widget" class="screenshot-img" loading="lazy">
+                        <h4>"Glanceable Widget"</h4>
+                        <p>Home &amp; Lock Screen — Check clothesline status and upcoming rain countdown right from your iOS Home Screen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Specifications & Privacy Section -->
+        <section class="tech-specs">
+            <div class="container">
+                <div class="section-header">
+                    <div class="pill-badge"><span>TECHNICAL SPECIFICATIONS</span></div>
+                    <h2>Engineered for iOS 17 &amp; 18</h2>
+                    <p>Built with Apple's latest native frameworks for seamless performance and zero privacy compromise.</p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3>Platform &amp; Hardware</h3>
+                        <ul>
+                            <li>Requires iOS 17.0 or later</li>
+                            <li>Optimised for iOS 17 &amp; iOS 18</li>
+                            <li>Apple Watch Companion Alerts</li>
+                            <li>WidgetKit Small &amp; Medium</li>
+                            <li>Lock Screen Complications</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Meteorological Engine</h3>
+                        <ul>
+                            <li>Apple WeatherKit Integration</li>
+                            <li>Minute-by-minute Rain Forecaster</li>
+                            <li>High-resolution Radar Geometry</li>
+                            <li>Wind &amp; Humidity Evaporation Index</li>
+                            <li>Battery-Friendly Background Refresh</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Privacy &amp; Data Ethics</h3>
+                        <ul>
+                            <li>Zero Third-Party Ad Trackers</li>
+                            <li>Location Used Exclusively for Weather</li>
+                            <li>Garden Address Override Mode</li>
+                            <li>No Cloud Profile or Signup Required</li>
+                            <li>100% On-Device Preference Storage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Banner -->
+        <section class="live-demo">
+            <div class="container">
+                <div class="demo-card" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.25) 0%, rgba(56, 189, 248, 0.15) 100%); border-color: rgba(56, 189, 248, 0.4);">
+                    <div class="demo-icon">
+                        <img src="assets/my-washing-is-out/app-icon.png" alt="My Washing Is Out" style="width: 72px; height: 72px; border-radius: 18px; box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);">
+                    </div>
+                    <div class="demo-content">
+                        <h3>Ready for Fresh, Rain-Free Laundry?</h3>
+                        <p>
+                            Download <strong>My Washing Is Out</strong> on the Apple App Store today and never get caught out by surprise showers again.
+                        </p>
+                        <a href="https://apps.apple.com/app/id[APP_ID]" target="_blank" rel="noopener noreferrer" class="demo-link" style="background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);">
+                            <i class="fab fa-apple"></i>
+                            <span>Download on the App Store</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="brand-wrapper" onclick="window.location.href='index.html'">
+                    <img src="Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+                    <div class="brand-title">Deviant Dev</div>
+                </div>
+                <p>
+                    Independent engineering studio building developer tools, AI applications, and native mobile software that challenge convention.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Products</h5>
+                <ul>
+                    <li><a href="my-washing-is-out.html">My Washing Is Out</a></li>
+                    <li><a href="swaggereditor.html">SwaggerEditor</a></li>
+                    <li><a href="techradar.html">Tech Radar</a></li>
+                    <li><a href="aimindmap.html">AI Mind Map</a></li>
+                    <li><a href="diy-ai.html">DIY AI Assistant</a></li>
+                    <li><a href="clean-it-ai.html">Clean It AI</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#capabilities">Capabilities</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Connect</h5>
+                <ul>
+                    <li><a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="mailto:info@deviantdev.co.uk">Contact Studio</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; 2026 Deviant Dev. All rights reserved.</div>
+            <div class="social-links">
+                <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:info@deviantdev.co.uk" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal for Screenshots -->
+    <div class="image-modal" role="dialog" aria-modal="true" aria-label="Image Preview">
+        <button class="modal-close" aria-label="Close Preview">&times;</button>
+        <img class="modal-content" src="" alt="Screenshot Preview">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

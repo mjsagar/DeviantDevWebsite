@@ -1,0 +1,622 @@
+<!-- Alias of privacy.html for specific routing like /my-washing-is-out-privacy.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — My Washing Is Out</title>
+  <meta name="description"
+    content="Privacy Policy for the My Washing Is Out iOS application by Deviant Dev. Learn how your location and data are handled with transparency and respect.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-heading: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --bg: #090d16;
+      --bg-surface: #111827;
+      --bg-surface-elevated: #1e293b;
+      --bg-subtle: rgba(255, 255, 255, 0.04);
+      --border: rgba(255, 255, 255, 0.1);
+      --border-strong: rgba(255, 255, 255, 0.18);
+
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --primary: #38bdf8;
+      --primary-hover: #0ea5e9;
+      --primary-glow: rgba(56, 189, 248, 0.15);
+
+      --accent: #f59e0b;
+      --accent-glow: rgba(245, 158, 11, 0.15);
+      --success: #10b981;
+
+      --container-width: 860px;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --bg-surface: #ffffff;
+        --bg-surface-elevated: #f1f5f9;
+        --bg-subtle: rgba(15, 23, 42, 0.03);
+        --border: rgba(15, 23, 42, 0.08);
+        --border-strong: rgba(15, 23, 42, 0.16);
+
+        --text: #0f172a;
+        --text-muted: #475569;
+        --text-dim: #94a3b8;
+
+        --primary: #0284c7;
+        --primary-hover: #0369a1;
+        --primary-glow: rgba(2, 132, 199, 0.1);
+
+        --accent: #d97706;
+        --accent-glow: rgba(217, 119, 6, 0.1);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    header.nav-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(9, 13, 22, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    @media (prefers-color-scheme: light) {
+      header.nav-header {
+        background: rgba(248, 250, 252, 0.85);
+      }
+    }
+
+    .nav-container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1.125rem;
+      font-family: var(--font-heading);
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, #38bdf8, #0284c7);
+      color: #fff;
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    main.content-wrapper {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+
+    .policy-header {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      background: var(--primary-glow);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .meta-info {
+      color: var(--text-dim);
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    /* Summary Card */
+    .summary-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-bottom: 3.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .summary-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #38bdf8, #0284c7, #f59e0b);
+    }
+
+    .summary-card h2 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text);
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .summary-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.925rem;
+      color: var(--text-muted);
+    }
+
+    .summary-icon {
+      font-size: 1.2rem;
+      line-height: 1;
+      margin-top: 0.15rem;
+      flex-shrink: 0;
+    }
+
+    /* Policy Body */
+    .policy-section {
+      margin-bottom: 2.75rem;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 1.25rem 0 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-muted);
+    }
+
+    ul,
+    ol {
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--primary-hover);
+    }
+
+    .highlight-box {
+      background: var(--bg-subtle);
+      border-left: 3px solid var(--primary);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 1.25rem 0;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer.site-footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem 1.5rem;
+      background: var(--bg-surface);
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.875rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+
+      header.nav-header,
+      footer.site-footer {
+        display: none;
+      }
+
+      .summary-card {
+        border: 1px solid #ccc;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="nav-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link">
+        <span class="brand-badge">🧺</span>
+        <span>Deviant Dev</span>
+      </a>
+      <nav class="nav-links">
+        <a href="my-washing-is-out.html">App Showcase</a>
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content-wrapper">
+    <div class="policy-header">
+      <span class="tag">Privacy &amp; Data Transparency</span>
+      <h1>Privacy Policy</h1>
+      <div class="meta-info">
+        <span><strong>App:</strong> My Washing Is Out</span>
+        <span><strong>Developer:</strong> Deviant Dev (Michael Sagar)</span>
+        <span><strong>Effective Date:</strong> September 22, 2026</span>
+      </div>
+    </div>
+
+    <!-- Summary Box -->
+    <div class="summary-card">
+      <h2><span>📋</span> Privacy Summary (At a Glance)</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <span class="summary-icon">📍</span>
+          <div>
+            <strong>Hyper-Local Weather Only</strong>
+            <p>Your coordinates are used strictly to request meteorological rain forecasts via Apple WeatherKit. We
+              never store or track your location.</p>
+          </div>
+        </div>
+        <div class="summary-item">
+          <span class="summary-icon">🚫</span>
+          <div>
+            <strong>No User Accounts</strong>
+            <p>No registration, passwords, emails, or user profiles are required or collected to use My Washing Is Out.
+            </p>
+          </div>
+        </div>
+        <div class="summary-item">
+          <span class="summary-icon">🔒</span>
+          <div>
+            <strong>Device-Only Storage</strong>
+            <p>Your drying session timers, clothesline status, and custom settings stay on your physical device.</p>
+          </div>
+        </div>
+        <div class="summary-item">
+          <span class="summary-icon">🛡️</span>
+          <div>
+            <strong>Full Consent Control</strong>
+            <p>Free users see ads via Google AdMob with full UMP consent options. Remove Ads subscribers enjoy an
+              entirely ad-free and tracker-free experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 1: Introduction -->
+    <section class="policy-section">
+      <h2>1. Introduction</h2>
+      <p>
+        At <strong>Deviant Dev</strong> ("we", "our", or "us"), we believe that simple, single-purpose apps should
+        respect your privacy. This Privacy Policy explains how <strong>My Washing Is Out</strong> (the "App") handles
+        information when you install and use it on your iOS device.
+      </p>
+      <p>
+        By using the App, you agree to the collection and use of information in accordance with this policy. If you have
+        any questions, you can reach us directly at <a href="mailto:info@deviantdev.com">info@deviantdev.com</a>.
+      </p>
+    </section>
+
+    <!-- Section 2: Location Data -->
+    <section class="policy-section">
+      <h2>2. Location Data</h2>
+      <p>
+        The core functionality of <strong>My Washing Is Out</strong> is to notify you before rain showers hit your
+        clothesline. Accurate weather prediction requires knowing your approximate geographical coordinates.
+      </p>
+      <h3>How Location Is Used</h3>
+      <ul>
+        <li><strong>Hyper-Local Forecasting:</strong> When you start a drying session or check weather conditions, the
+          App queries your device's location to fetch accurate precipitation and cloud cover data from <strong>Apple
+            WeatherKit</strong>.</li>
+        <li><strong>Background Updates:</strong> When a drying session is actively in progress ("Hang Out"), iOS may
+          briefly wake the App in the background to inspect incoming rain radars for your location.</li>
+        <li><strong>No Tracking or History:</strong> We do not log, retain, or map your movement history. Location
+          coordinates are transmitted in encrypted form directly to Apple's weather services and discarded immediately
+          after the forecast is processed.</li>
+        <li><strong>Manual Address Option:</strong> If you prefer not to grant GPS location access, the App provides an
+          option to manually enter a static address (e.g., your home address). All weather lookups will then be based
+          strictly on that saved coordinate.</li>
+      </ul>
+      <div class="highlight-box">
+        <p><strong>Control:</strong> You can grant, change, or revoke Location permissions at any time via your device:
+          <em>Settings &gt; Privacy &amp; Security &gt; Location Services &gt; My Washing Is Out</em>.</p>
+      </div>
+    </section>
+
+    <!-- Section 3: Data Stored on Device -->
+    <section class="policy-section">
+      <h2>3. Information Stored Locally on Your Device</h2>
+      <p>
+        To provide a seamless experience, the App stores certain preferences and state information locally on your
+        device (using iOS <code>UserDefaults</code> and a private App Group container):
+      </p>
+      <ul>
+        <li>Active laundry session state (e.g., whether washing is currently out, time hung out).</li>
+        <li>User-selected warning lead time (e.g., 5, 15, or 30 minutes advance warning).</li>
+        <li>Cached weather snapshots for rendering iOS Home Screen and Lock Screen widgets.</li>
+        <li>Ad-free status or active in-app purchase receipts verified through Apple StoreKit.</li>
+      </ul>
+      <p>
+        None of this information is sent to or stored on any external server managed by Deviant Dev.
+      </p>
+    </section>
+
+    <!-- Section 4: Notifications -->
+    <section class="policy-section">
+      <h2>4. Push &amp; Local Notifications</h2>
+      <p>
+        When you enable alerts, the App schedules <strong>Local Notifications</strong> directly through iOS (via
+        <code>UserNotifications</code> framework) to alert you before rain is predicted.
+      </p>
+      <ul>
+        <li>All notification triggers are evaluated and generated directly on your iPhone.</li>
+        <li>We do not operate an external notification server and do not collect your Apple Push Notification Service
+          (APNs) device token.</li>
+        <li>You can toggle notification permissions on or off at any time in <em>Settings &gt; Notifications &gt; My
+            Washing Is Out</em>.</li>
+      </ul>
+    </section>
+
+    <!-- Section 5: Third-Party Services -->
+    <section class="policy-section">
+      <h2>5. Third-Party Services and SDKs</h2>
+      <p>The App integrates with select, reputable third-party services to deliver weather data, handle monetization,
+        and provide ads on the free tier:</p>
+
+      <h3>A. Apple WeatherKit</h3>
+      <p>
+        Weather forecasts, hourly precipitation data, wind, and sky condition metrics are provided by Apple WeatherKit.
+        When weather data is requested, your device communicates with Apple servers. This data exchange is subject to <a
+          href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.
+      </p>
+
+      <h3>B. Apple StoreKit (In-App Subscriptions)</h3>
+      <p>
+        The App offers an optional auto-renewing "Remove Ads" subscription. All payment transactions, receipt
+        verification, and renewals are handled entirely by Apple through the App Store. Deviant Dev never receives,
+        processes, or stores your payment card details, billing address, or Apple ID credentials.
+      </p>
+
+      <h3>C. Google AdMob (Advertising)</h3>
+      <p>
+        The free tier of the App displays banner and interstitial advertisements served by Google AdMob. Google AdMob
+        may collect and process information such as:
+      </p>
+      <ul>
+        <li>Device identifiers (such as the Identifier for Advertisers — IDFA, subject to your App Tracking Transparency
+          permission).</li>
+        <li>IP address and general coarse location (country/city level) for ad serving and fraud prevention.</li>
+        <li>Ad interaction data and technical diagnostic logs.</li>
+      </ul>
+      <p>
+        <strong>User Consent (Google UMP):</strong> In regions requiring consent (such as the EEA and UK under GDPR),
+        the App presents Google's certified User Messaging Platform (UMP) consent dialog. You can review or modify your
+        consent preferences at any time by tapping <strong>"Privacy options"</strong> in the App's Settings screen.
+      </p>
+      <p>
+        <strong>Ad-Free Experience:</strong> Subscribing to "Remove Ads" completely disables the Google AdMob SDK and
+        silences all ad network communications.
+      </p>
+      <p>
+        For further details on how Google uses data, visit <a
+          href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's
+          Advertising Privacy &amp; Terms</a>.
+      </p>
+    </section>
+
+    <!-- Section 6: Children's Privacy -->
+    <section class="policy-section">
+      <h2>6. Children's Privacy (COPPA Compliance)</h2>
+      <p>
+        <strong>My Washing Is Out</strong> is intended for general audiences and is not directed to children under the
+        age of 13. We do not knowingly collect personal identifiable information from children under 13. If you believe
+        that a child has provided us with personal information, please contact us immediately so we can take appropriate
+        steps.
+      </p>
+    </section>
+
+    <!-- Section 7: User Rights (GDPR & CCPA/CPRA) -->
+    <section class="policy-section">
+      <h2>7. Your Privacy Rights (GDPR, UK GDPR, CCPA/CPRA)</h2>
+      <p>
+        Depending on your location, you may have specific statutory rights regarding your personal data:
+      </p>
+      <ul>
+        <li><strong>Right of Access &amp; Portability:</strong> Because we do not operate user accounts or maintain
+          personal databases, we hold no personal data linked to your identity.</li>
+        <li><strong>Right to Erasure / Deletion:</strong> You can delete all locally cached data at any time simply by
+          uninstalling the App from your iOS device.</li>
+        <li><strong>Right to Opt Out of Tracking:</strong> You can deny App Tracking Transparency (ATT) permission when
+          prompted by iOS, or disable tracking in <em>Settings &gt; Privacy &amp; Security &gt; Tracking</em>.</li>
+        <li><strong>Right to Revoke Location / Notifications:</strong> You can modify or withdraw permissions at any
+          time through standard iOS Settings.</li>
+      </ul>
+    </section>
+
+    <!-- Section 8: Changes -->
+    <section class="policy-section">
+      <h2>8. Changes to This Privacy Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time to reflect changes in our practices, new app capabilities,
+        or legal requirements. When updates are published, the revised policy will be posted on this page with an
+        updated "Effective Date" at the top.
+      </p>
+      <p>
+        We encourage you to review this page periodically for any updates.
+      </p>
+    </section>
+
+    <!-- Section 9: Contact -->
+    <section class="policy-section">
+      <h2>9. Contact Us</h2>
+      <p>
+        If you have any questions, comments, or concerns regarding this Privacy Policy or how your data is treated,
+        please reach out to us:
+      </p>
+      <div class="highlight-box">
+        <p><strong>Deviant Dev</strong></p>
+        <p>Developer: Michael Sagar</p>
+        <p>Email: <a href="mailto:info@deviantdev.com">info@deviantdev.com</a></p>
+        <p>Website: <a href="https://deviantdev.com">https://deviantdev.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">Deviant Dev Studio</a>
+      <a href="my-washing-is-out.html">My Washing Is Out Showcase</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms
+        of Use (Apple EULA)</a>
+      <a href="mailto:info@deviantdev.com">Contact &amp; Support</a>
+    </div>
+    <p>&copy; 2026 Deviant Dev. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

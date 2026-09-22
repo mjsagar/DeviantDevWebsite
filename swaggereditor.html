@@ -3,179 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwaggerEditor - Modern OpenAPI 3.0 Editor</title>
+    <title>SwaggerEditor — Modern OpenAPI 3.0 Editor</title>
+    <meta name="description" content="Build, validate, and preview OpenAPI 3.0 specifications with real-time Monaco linting, multi-viewer modes, and custom validation rules.">
+    <link rel="icon" type="image/png" href="Dlogomin.png">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav>
-            <img src="Dlogomin.png" alt="Deviant Dev Logo" class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#products">Products</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
+            <div class="brand-wrapper" onclick="window.location.href='index.html'">
+                <img src="Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+                <div class="brand-title">
+                    Deviant Dev
+                    <span class="brand-badge">TOOLING</span>
+                </div>
+            </div>
+
+            <div class="nav-links-wrapper">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#capabilities">Capabilities</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="btn-github-nav">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#capabilities">Capabilities</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+    </div>
+
     <main>
+        <!-- Product Hero -->
         <section class="product-hero">
             <div class="hero-content">
+                <div class="pill-badge">
+                    <span class="dot"></span>
+                    <span>MONACO-POWERED OPENAPI 3.0 EDITOR</span>
+                </div>
                 <h1>Build Better APIs with SwaggerEditor</h1>
-                <p>The modern OpenAPI 3.0 editor designed for developers who demand speed, precision, and collaboration.</p>
+                <p>
+                    The modern, high-precision OpenAPI 3.0 editor designed for engineers who demand speed, instant schema validation, and flexible multi-format documentation previews.
+                </p>
                 <div class="cta-buttons">
-                    <button class="cta-button primary">Try It Free</button>
-                    <button class="cta-button secondary">View Demo</button>
+                    <a href="#screenshots" class="cta-button primary">
+                        <span>Explore Interface</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                    <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="cta-button secondary">
+                        <i class="fab fa-github"></i>
+                        <span>View Source</span>
+                    </a>
                 </div>
             </div>
         </section>
 
+        <!-- Features Grid -->
         <section class="features">
             <div class="container">
-                <h2>Key Features</h2>
+                <div class="section-header">
+                    <div class="pill-badge"><span>CORE CAPABILITIES</span></div>
+                    <h2>Engineered for API Velocity</h2>
+                    <p>Everything you need to design, test, and document production-ready OpenAPI specifications.</p>
+                </div>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-edit"></i></div>
+                        <div class="feature-icon"><i class="fas fa-code"></i></div>
                         <h3>Monaco-Powered Editing</h3>
-                        <p>Write OpenAPI specs with the same editor that powers VS Code. Get instant syntax highlighting, auto-completion, and error detection as you type.</p>
+                        <p>Write OpenAPI specs with the same engine that powers VS Code. Instant syntax highlighting, intelligent schema completion, and linting as you type.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
-                        <h3>Real-Time Validation</h3>
-                        <p>Built-in OpenAPI 3.0 validator catches errors instantly. See exactly what's wrong and where, with one-click navigation to problem areas.</p>
+                        <h3>Real-Time Schema Validation</h3>
+                        <p>Built-in OpenAPI 3.0 validator catches errors instantly. Jump straight to problematic lines with one-click editor synchronization.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon"><i class="fas fa-eye"></i></div>
-                        <h3>Multiple Preview Modes</h3>
-                        <p>Preview your API in 6 different formats: Deviant Viewer, Swagger UI, Redoc, RapiDoc, Scalar, and Stoplight Elements.</p>
+                        <h3>6 Documentation Preview Modes</h3>
+                        <p>Preview specs instantly in Deviant Viewer, Swagger UI, Redoc, RapiDoc, Scalar, or Stoplight Elements without leaving the editor.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon"><i class="fas fa-puzzle-piece"></i></div>
-                        <h3>Drag & Drop Components</h3>
-                        <p>Insert complete OpenAPI components with a single click. Endpoints, schemas, parameters, responses, and security definitions.</p>
+                        <h3>Drag &amp; Drop Components</h3>
+                        <p>Insert pre-built OpenAPI snippets: endpoints, schemas, parameters, security schemes, and status responses ready to configure.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                        <div class="feature-icon"><i class="fas fa-sliders"></i></div>
                         <h3>Custom Validation Rules</h3>
-                        <p>Create custom JavaScript validation rules to enforce your organization's API standards and naming conventions.</p>
+                        <p>Author custom JavaScript validation rules to enforce organizational standards, naming conventions, and security policies across teams.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-users"></i></div>
-                        <h3>Team Collaboration</h3>
-                        <p>Role-based access control with Admin, Editor, and Viewer roles. SSO integration with OAuth 2.0.</p>
+                        <div class="feature-icon"><i class="fas fa-users-gear"></i></div>
+                        <h3>Team Roles &amp; SSO Ready</h3>
+                        <p>Enterprise role-based access control (Admin, Editor, Viewer), OAuth 2.0 integration, and isolated storage for private schemas.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="screenshots">
+        <!-- Screenshots Gallery -->
+        <section id="screenshots" class="screenshots">
             <div class="container">
-                <h2>Screenshots</h2>
+                <div class="section-header">
+                    <div class="pill-badge"><span>INTERFACE GALLERY</span></div>
+                    <h2>See SwaggerEditor in Action</h2>
+                    <p>Click on any screenshot to view the high-resolution workspace.</p>
+                </div>
                 <div class="screenshot-grid">
-                    <div class="screenshot-item">
-                        <img src="SwagerEditor/main screen.png" alt="Main Editor Interface" class="screenshot-img" onclick="openModal(this.src, this.alt)">
+                    <div class="screenshot-item" onclick="openModal('SwagerEditor/main screen.png', 'Complete Workspace')">
+                        <img src="SwagerEditor/main screen.png" alt="Complete Workspace" class="screenshot-img" loading="lazy">
                         <h4>Complete Workspace</h4>
-                        <p>Editor, validation panel, suggestions, and custom rules all in one view</p>
+                        <p>Monaco editor, validation panel, suggestions, and custom rules all in one synchronized view.</p>
                     </div>
-                    <div class="screenshot-item">
-                        <img src="SwagerEditor/darkmode.png" alt="Dark Mode" class="screenshot-img" onclick="openModal(this.src, this.alt)">
+                    <div class="screenshot-item" onclick="openModal('SwagerEditor/darkmode.png', 'Dark Theme Support')">
+                        <img src="SwagerEditor/darkmode.png" alt="Dark Theme Support" class="screenshot-img" loading="lazy">
                         <h4>Dark Theme Support</h4>
-                        <p>Easy on the eyes with full dark mode support</p>
+                        <p>High-contrast, eye-friendly dark mode designed for long engineering sessions.</p>
                     </div>
-                    <div class="screenshot-item">
-                        <img src="SwagerEditor/splitView.png" alt="Split View" class="screenshot-img" onclick="openModal(this.src, this.alt)">
-                        <h4>Live Preview</h4>
-                        <p>Work and preview simultaneously with split view mode</p>
+                    <div class="screenshot-item" onclick="openModal('SwagerEditor/splitView.png', 'Live Split View')">
+                        <img src="SwagerEditor/splitView.png" alt="Live Split View" class="screenshot-img" loading="lazy">
+                        <h4>Live Split View</h4>
+                        <p>Code and preview simultaneously with reactive live re-rendering on every keystroke.</p>
                     </div>
-                    <div class="screenshot-item">
-                        <img src="SwagerEditor/preview-deviant-viewer.png" alt="Deviant Viewer Preview" class="screenshot-img" onclick="openModal(this.src, this.alt)">
+                    <div class="screenshot-item" onclick="openModal('SwagerEditor/preview-deviant-viewer.png', 'Deviant Viewer Preview')">
+                        <img src="SwagerEditor/preview-deviant-viewer.png" alt="Deviant Viewer Preview" class="screenshot-img" loading="lazy">
                         <h4>Deviant Viewer</h4>
-                        <p>Clean, organized API documentation with the custom Deviant Viewer</p>
+                        <p>Clean, organized, distraction-free API documentation generated directly from your OpenAPI 3.0 spec.</p>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
 
-    <!-- Modal for image preview -->
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img id="modalImage" src="" alt="">
-            <div id="modalCaption"></div>
-        </div>
-    </div>
-            </div>
-        </section>
-
+        <!-- Pricing Section -->
         <section class="pricing">
             <div class="container">
-                <h2>Pricing</h2>
+                <div class="section-header">
+                    <div class="pill-badge"><span>TRANSPARENT PLANS</span></div>
+                    <h2>Flexible Options for Developers &amp; Teams</h2>
+                    <p>Start free with local storage or scale to team cloud workflows.</p>
+                </div>
                 <div class="pricing-grid">
                     <div class="pricing-card">
-                        <h3>Free</h3>
-                        <div class="price">$0<span>/month</span></div>
-                        <ul>
-                            <li>Unlimited API specs</li>
-                            <li>All editing features</li>
-                            <li>All preview modes</li>
-                            <li>Custom validation rules</li>
-                            <li>Local storage only</li>
-                        </ul>
-                        <button class="pricing-btn">Get Started</button>
+                        <div>
+                            <h3>Community</h3>
+                            <div class="price">$0<span>/month</span></div>
+                            <ul>
+                                <li>Unlimited local API specs</li>
+                                <li>All Monaco editing features</li>
+                                <li>All 6 preview modes</li>
+                                <li>Custom JavaScript validation</li>
+                                <li>Zero signup required</li>
+                            </ul>
+                        </div>
+                        <button class="pricing-btn" onclick="window.location.href='#screenshots'">Start Free</button>
                     </div>
+
                     <div class="pricing-card featured">
-                        <h3>Professional</h3>
-                        <div class="price">$9<span>/user/month</span></div>
-                        <ul>
-                            <li>Everything in Free</li>
-                            <li>Cloud storage</li>
-                            <li>Access from any device</li>
-                            <li>Specs library</li>
-                            <li>Team collaboration</li>
-                        </ul>
-                        <button class="pricing-btn">Start Trial</button>
+                        <div>
+                            <span class="card-status-pill live" style="margin-bottom: 1rem; display: inline-block;">MOST POPULAR</span>
+                            <h3>Professional</h3>
+                            <div class="price">$9<span>/user/mo</span></div>
+                            <ul>
+                                <li>Everything in Community</li>
+                                <li>Encrypted cloud spec storage</li>
+                                <li>Access from any device</li>
+                                <li>Specs catalog &amp; smart search</li>
+                                <li>Team sharing &amp; collaboration</li>
+                                <li>Priority email support</li>
+                            </ul>
+                        </div>
+                        <button class="pricing-btn" onclick="window.location.href='mailto:info@deviantdev.co.uk?subject=SwaggerEditor%20Pro'">Start Pro Trial</button>
                     </div>
+
                     <div class="pricing-card">
-                        <h3>Enterprise</h3>
-                        <div class="price">Custom<span>/pricing</span></div>
-                        <ul>
-                            <li>Everything in Professional</li>
-                            <li>SSO integration</li>
-                            <li>Custom roles & permissions</li>
-                            <li>Priority support</li>
-                            <li>On-premise deployment</li>
-                        </ul>
-                        <button class="pricing-btn">Contact Sales</button>
+                        <div>
+                            <h3>Enterprise</h3>
+                            <div class="price">Custom<span>/tier</span></div>
+                            <ul>
+                                <li>Everything in Professional</li>
+                                <li>SSO &amp; Azure AD / Okta integration</li>
+                                <li>Custom RBAC permissions</li>
+                                <li>On-premise Docker deployment</li>
+                                <li>SLA &amp; dedicated support channel</li>
+                            </ul>
+                        </div>
+                        <button class="pricing-btn" onclick="window.location.href='mailto:info@deviantdev.co.uk?subject=SwaggerEditor%20Enterprise'">Contact Enterprise</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Deviant Dev. All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="brand-wrapper" onclick="window.location.href='index.html'">
+                    <img src="Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+                    <div class="brand-title">Deviant Dev</div>
+                </div>
+                <p>
+                    Independent engineering studio building developer tools, AI applications, and native mobile software that challenge convention.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Other Products</h5>
+                <ul>
+                    <li><a href="my-washing-is-out.html">My Washing Is Out</a></li>
+                    <li><a href="techradar.html">Tech Radar</a></li>
+                    <li><a href="aimindmap.html">AI Mind Map</a></li>
+                    <li><a href="diy-ai.html">DIY AI Assistant</a></li>
+                    <li><a href="clean-it-ai.html">Clean It AI</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#capabilities">Capabilities</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Connect</h5>
+                <ul>
+                    <li><a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="mailto:info@deviantdev.co.uk">Contact Studio</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; 2025 Deviant Dev. All rights reserved.</div>
+            <div class="social-links">
+                <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:info@deviantdev.co.uk" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </footer>
-    
-    <script>
-        function openModal(src, alt) {
-            document.getElementById('imageModal').style.display = 'block';
-            document.getElementById('modalImage').src = src;
-            document.getElementById('modalCaption').textContent = alt;
-        }
-        
-        function closeModal() {
-            document.getElementById('imageModal').style.display = 'none';
-        }
-        
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
-    </script>
+
+    <!-- Lightbox Modal -->
+    <div class="image-modal" role="dialog" aria-modal="true" aria-label="Image Preview">
+        <button class="modal-close" aria-label="Close Preview">&times;</button>
+        <img class="modal-content" src="" alt="Screenshot Preview">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
