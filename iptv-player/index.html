@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Player — A modern IPTV player for Android TV</title>
+    <meta name="description" content="IPTV Player is an open-source, UI-first IPTV player for Android TV and Google TV: a fast TV guide, catch-up, recording, movies and series, and 4K playback. Bring your own playlist.">
+    <link rel="icon" type="image/svg+xml" href="logo-mark.svg">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        .iptv-banner { display: block; width: min(560px, 100%); margin: 0 auto 2rem; border-radius: 18px; box-shadow: 0 20px 60px rgba(124, 92, 255, 0.25); }
+        .install-steps { max-width: 760px; margin: 0 auto; display: grid; gap: 1rem; }
+        .install-step { display: flex; gap: 1rem; align-items: flex-start; text-align: left; }
+        .install-step .num { flex: 0 0 2.25rem; height: 2.25rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; background: linear-gradient(135deg, #7C5CFF, #FF4D8D); color: #fff; }
+        .install-step code, .apk-meta code { word-break: break-all; padding: 0.1rem 0.4rem; border-radius: 6px; background: rgba(127, 127, 127, 0.15); }
+        .apk-meta { max-width: 760px; margin: 2rem auto 0; font-size: 0.9rem; opacity: 0.8; text-align: center; line-height: 1.7; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="brand-wrapper" onclick="window.location.href='../index.html'">
+                <img src="../Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+                <div class="brand-title">
+                    Deviant Dev
+                    <span class="brand-badge">ANDROID TV</span>
+                </div>
+            </div>
+
+            <div class="nav-links-wrapper">
+                <ul>
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#products">Products</a></li>
+                    <li><a href="../index.html#capabilities">Capabilities</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="btn-github-nav">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <ul>
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#products">Products</a></li>
+            <li><a href="../index.html#capabilities">Capabilities</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Product Hero -->
+        <section class="product-hero">
+            <div class="hero-content">
+                <img class="iptv-banner" src="logo-banner.svg" alt="IPTV Player">
+                <div class="pill-badge">
+                    <span class="dot"></span>
+                    <span>ANDROID TV • GOOGLE TV • EARLY PREVIEW</span>
+                </div>
+                <h1>IPTV Player</h1>
+                <p>
+                    A fast, good-looking IPTV player for the big screen. Add your own M3U playlist or Xtream Codes login and get a live TV guide, catch-up, recording, movies and series, all built for the remote.
+                </p>
+                <div class="cta-buttons">
+                    <a href="iptv-player.apk" class="cta-button primary" download>
+                        <i class="fab fa-android"></i>
+                        <span>Download APK (v0.1.0, 4.7 MB)</span>
+                    </a>
+                    <a href="#install" class="cta-button secondary">
+                        <span>How to install</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="pill-badge"><span>BUILT FOR THE REMOTE</span></div>
+                    <h2>Everything Live TV Should Be</h2>
+                    <p>A player only: it ships no channels or streams. Bring the service you already pay for.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-table-list"></i></div>
+                        <h3>A Guide That Keeps Up</h3>
+                        <p>Live video behind a smooth TV guide, genre and favourite filters, reminders, and real XMLTV listings from your provider or any guide link.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-clock-rotate-left"></i></div>
+                        <h3>Catch-up &amp; Start Over</h3>
+                        <p>Play programmes you missed straight from the guide, or restart the one that's on now, on providers that support catch-up.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-circle-dot"></i></div>
+                        <h3>Record to Anywhere</h3>
+                        <p>Record now or schedule from the guide. Save to the device, a USB drive, any folder, or a NAS on your network.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-film"></i></div>
+                        <h3>Movies &amp; Series</h3>
+                        <p>Browse, resume and binge with Continue watching and Up next. Add free TMDB / TVDB keys for rich artwork, title logos and plots.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-tv"></i></div>
+                        <h3>Proper 4K Playback</h3>
+                        <p>Frame-rate matching for judder-free films and sport, HDR10 / HLG / Dolby Vision detection, and picture size remembered per channel.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-mobile-screen"></i></div>
+                        <h3>Set Up From Your Phone</h3>
+                        <p>Scan a QR code and paste long playlist links or keys on your phone instead of typing them with the remote.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Install -->
+        <section id="install" class="use-cases">
+            <div class="container">
+                <div class="section-header">
+                    <div class="pill-badge"><span>INSTALL</span></div>
+                    <h2>Install on Your TV</h2>
+                    <p>Not on the Play Store yet, so it's installed ("sideloaded") as an APK.</p>
+                </div>
+
+                <div class="install-steps">
+                    <div class="install-step">
+                        <div class="num">1</div>
+                        <div><h3>Get a downloader</h3><p>On your Android TV or Google TV, install the free <strong>Downloader</strong> app (by AFTVnews) from the Play Store.</p></div>
+                    </div>
+                    <div class="install-step">
+                        <div class="num">2</div>
+                        <div><h3>Allow it to install apps</h3><p>Settings → Apps → Security &amp; restrictions → Unknown sources, then turn on <strong>Downloader</strong>. (The exact path varies a little by TV.)</p></div>
+                    </div>
+                    <div class="install-step">
+                        <div class="num">3</div>
+                        <div><h3>Download and install</h3><p>Open Downloader and enter <code>https://deviantdev.co.uk/iptv-player/iptv-player.apk</code>, then choose Install.</p></div>
+                    </div>
+                    <div class="install-step">
+                        <div class="num">4</div>
+                        <div><h3>Add your service</h3><p>Open IPTV Player, scan the QR code with your phone, and paste your M3U link or Xtream Codes details.</p></div>
+                    </div>
+                </div>
+
+                <div class="apk-meta">
+                    Version 0.1.0 · Android 8.0 or newer · Android TV / Google TV (works on phones and tablets too)<br>
+                    SHA-256: <code>3ce1e1a658e93ffa8c6161ff2fc4bbef9c8c480569b3aa8c72d38cd594a9b26f</code><br>
+                    Early preview build. IPTV Player doesn't provide any channels, streams or subscriptions.
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Banner -->
+        <section class="live-demo">
+            <div class="container">
+                <div class="demo-card">
+                    <div class="demo-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <div class="demo-content">
+                        <h3>Ready for the Big Screen</h3>
+                        <p>
+                            Download the APK and turn your TV box into a modern live TV and catch-up player.
+                        </p>
+                        <a href="iptv-player.apk" class="demo-link" download>
+                            <i class="fas fa-download"></i>
+                            <span>Download IPTV Player</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="brand-wrapper" onclick="window.location.href='../index.html'">
+                    <img src="../Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+                    <div class="brand-title">Deviant Dev</div>
+                </div>
+                <p>
+                    Independent engineering studio building developer tools, AI applications, and native mobile software that challenge convention.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Products</h5>
+                <ul>
+                    <li><a href="../my-washing-is-out.html">Clothing Line</a></li>
+                    <li><a href="../swaggereditor.html">SwaggerEditor</a></li>
+                    <li><a href="../techradar.html">Tech Radar</a></li>
+                    <li><a href="../aimindmap.html">AI Mind Map</a></li>
+                    <li><a href="../diy-ai.html">DIY AI Assistant</a></li>
+                    <li><a href="../clean-it-ai.html">Clean It AI</a></li>
+                    <li><a href="./">IPTV Player</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#products">Products</a></li>
+                    <li><a href="../index.html#capabilities">Capabilities</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Connect</h5>
+                <ul>
+                    <li><a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="mailto:info@deviantdev.co.uk">Contact Studio</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; 2026 Deviant Dev. All rights reserved.</div>
+            <div class="social-links">
+                <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:info@deviantdev.co.uk" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
