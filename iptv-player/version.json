@@ -1,7 +1,7 @@
 {
-  "versionCode": 13,
-  "versionName": "0.4.1",
+  "versionCode": 14,
+  "versionName": "0.4.2",
   "apk": "https://deviantdev.co.uk/iptv-player/iptv-player.apk",
-  "sha256": "38fe5395b9fe89a758b9763c8125f0e6661459a7ba4fbc869435a23d0b427248",
-  "notes": "Find duplicate channels in Settings, and a suggestion of another channel when one keeps dropping out."
+  "sha256": "3810302f004c8c2e4500482c9939262e22eb4d7e30a0ddb2e700ade71cd78860",
+  "notes": "Back now leaves Live TV from the recently watched bar, and the programme page fits the screen better."
 }
