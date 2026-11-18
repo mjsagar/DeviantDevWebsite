@@ -1,7 +1,7 @@
 {
-  "versionCode": 12,
-  "versionName": "0.4.0",
+  "versionCode": 13,
+  "versionName": "0.4.1",
   "apk": "https://deviantdev.co.uk/iptv-player/iptv-player.apk",
-  "sha256": "15b8622d80cb5722268b47b10cc57bac742c920f3aeac4dae6b61d43253f5535",
-  "notes": "Free channels by country, richer guide and Home, profiles, parental lock and a phone remote."
+  "sha256": "38fe5395b9fe89a758b9763c8125f0e6661459a7ba4fbc869435a23d0b427248",
+  "notes": "Find duplicate channels in Settings, and a suggestion of another channel when one keeps dropping out."
 }
