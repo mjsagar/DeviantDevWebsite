@@ -1,7 +1,7 @@
 {
-  "versionCode": 14,
-  "versionName": "0.4.2",
+  "versionCode": 15,
+  "versionName": "0.4.3",
   "apk": "https://deviantdev.co.uk/iptv-player/iptv-player.apk",
-  "sha256": "3810302f004c8c2e4500482c9939262e22eb4d7e30a0ddb2e700ade71cd78860",
-  "notes": "Back now leaves Live TV from the recently watched bar, and the programme page fits the screen better."
+  "sha256": "6c903598e12067a170170fab6271f40df62a5d56d48e2b61f5b13e2af0d74f56",
+  "notes": "Pictures for far more TV shows, in the guide and Live TV, and a new Home row of the popular shows coming up on your channels."
 }
