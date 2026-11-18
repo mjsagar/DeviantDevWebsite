@@ -1,7 +1,7 @@
 {
-  "versionCode": 15,
-  "versionName": "0.4.3",
+  "versionCode": 16,
+  "versionName": "0.4.4",
   "apk": "https://deviantdev.co.uk/iptv-player/iptv-player.apk",
-  "sha256": "6c903598e12067a170170fab6271f40df62a5d56d48e2b61f5b13e2af0d74f56",
-  "notes": "Pictures for far more TV shows, in the guide and Live TV, and a new Home row of the popular shows coming up on your channels."
+  "sha256": "6dd30840c98615fd8ce8648172888be3919147d805afa0452fdd46624bf98965",
+  "notes": "Hiding a channel or group in the TV guide no longer leaves you stuck on an empty group."
 }
