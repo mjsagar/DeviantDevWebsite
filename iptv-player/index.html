@@ -15,6 +15,21 @@
         .install-step .num { flex: 0 0 2.25rem; height: 2.25rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; background: linear-gradient(135deg, #7C5CFF, #FF4D8D); color: #fff; }
         .install-step code, .apk-meta code { word-break: break-all; padding: 0.1rem 0.4rem; border-radius: 6px; background: rgba(127, 127, 127, 0.15); }
         .apk-meta { max-width: 760px; margin: 2rem auto 0; font-size: 0.9rem; opacity: 0.8; text-align: center; line-height: 1.7; }
+        /* Screenshots */
+        .shots { max-width: 1100px; margin: 0 auto; }
+        .shot { margin: 0; cursor: zoom-in; }
+        .shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.08); background: #0b0d12; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .shot:hover img, .shot:focus-visible img { transform: translateY(-3px); box-shadow: 0 24px 60px rgba(124, 92, 255, 0.28); }
+        .shot:focus-visible { outline: none; }
+        .shot figcaption { margin-top: 0.7rem; font-size: 0.95rem; color: var(--text-muted, #94a3b8); line-height: 1.5; }
+        .shot figcaption strong { color: var(--text-main, #f8fafc); font-weight: 600; }
+        .shot-main { margin-bottom: 1.75rem; }
+        .shot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+        .shots-note { text-align: center; font-size: 0.85rem; color: var(--text-subtle, #64748b); margin-top: 1.5rem; }
+        .lightbox { position: fixed; inset: 0; background: rgba(5, 7, 12, 0.92); display: none; align-items: center; justify-content: center; padding: 16px; z-index: 1000; cursor: zoom-out; }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-width: min(1600px, 100%); max-height: 88vh; border-radius: 12px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6); }
+        .lightbox p { position: absolute; bottom: 18px; left: 16px; right: 16px; text-align: center; color: #e2e8f0; font-size: 0.95rem; margin: 0; }
     </style>
 </head>
 <body>
@@ -77,7 +92,7 @@
                 </div>
                 <h1>IPTV Player</h1>
                 <p>
-                    A fast, good-looking IPTV player for the big screen. Add your own M3U playlist or Xtream Codes login and get a live TV guide, catch-up, recording, movies and series, all built for the remote.
+                    A fast, good-looking IPTV player for the big screen. Add your own M3U playlist or Xtream Codes login, or switch on free channels by country, and get a live TV guide, catch-up, recording, movies and series, all built for the remote.
                 </p>
                 <div class="cta-buttons">
                     <a href="iptv-player.apk" class="cta-button primary" download>
@@ -88,6 +103,46 @@
                         <span>How to install</span>
                         <i class="fas fa-arrow-down"></i>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section id="screenshots" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="pill-badge"><span>SCREENSHOTS</span></div>
+                    <h2>See It on the Big Screen</h2>
+                    <p>Taken on an Android TV at 1080p. Select any picture to see it full size.</p>
+                </div>
+                <div class="shots">
+                    <figure class="shot shot-main" tabindex="0">
+                        <img src="screens/tv-guide.jpg" width="1600" height="900" alt="The TV guide: live video behind a grid of channels and programmes, with the focused programme's details at the top">
+                        <figcaption><strong>The TV guide.</strong> The channel you're on keeps playing behind the grid. Left and Right move through time, OK watches, hold OK for everything else.</figcaption>
+                    </figure>
+                    <div class="shot-grid">
+                        <figure class="shot" tabindex="0">
+                            <img src="screens/home.jpg" width="1600" height="900" loading="lazy" alt="Home: the last watched channel playing at the top, with rows of channels below">
+                            <figcaption><strong>Home</strong> plays your most-watched channel and learns what you watch.</figcaption>
+                        </figure>
+                        <figure class="shot" tabindex="0">
+                            <img src="screens/live-tv.jpg" width="1600" height="900" loading="lazy" alt="Live TV: full-screen picture with a banner showing the channel, what's on now and next, and the channels above and below">
+                            <figcaption><strong>Live TV</strong> shows what's on, what's next and the channels either side.</figcaption>
+                        </figure>
+                        <figure class="shot" tabindex="0">
+                            <img src="screens/programme.jpg" width="1600" height="900" loading="lazy" alt="A programme page with a picture, details and buttons to watch, remind, record or record every episode">
+                            <figcaption><strong>Programme page:</strong> remind, record, or record every episode.</figcaption>
+                        </figure>
+                        <figure class="shot" tabindex="0">
+                            <img src="screens/film-player.jpg" width="1600" height="900" loading="lazy" alt="The film player: a timeline with skip buttons, audio and subtitles, picture size and info">
+                            <figcaption><strong>Films and series</strong> with TV-style controls: skip, resume, audio and subtitles.</figcaption>
+                        </figure>
+                        <figure class="shot" tabindex="0">
+                            <img src="screens/free-channels.jpg" width="1600" height="900" loading="lazy" alt="Free channels: a list of countries to switch on, each with its free guides">
+                            <figcaption><strong>Free channels</strong> by country, with free TV guides, if you want them.</figcaption>
+                        </figure>
+                    </div>
+                    <p class="shots-note">Shown with a demo line-up: fictional channels and the open Blender films.</p>
                 </div>
             </div>
         </section>
@@ -105,17 +160,17 @@
                     <div class="feature-card">
                         <div class="feature-icon"><i class="fas fa-table-list"></i></div>
                         <h3>A Guide That Keeps Up</h3>
-                        <p>Live video behind a smooth TV guide, genre and favourite filters, reminders, and real XMLTV listings from your provider or any guide link.</p>
+                        <p>Live video behind a smooth TV guide, group and favourite filters, reminders that work even when the app is closed, and real XMLTV listings from your provider or any guide link.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon"><i class="fas fa-clock-rotate-left"></i></div>
                         <h3>Catch-up &amp; Start Over</h3>
-                        <p>Play programmes you missed straight from the guide, or restart the one that's on now, on providers that support catch-up.</p>
+                        <p>Start over the programme that's on, or pick an earlier one from Live TV options, on providers that support catch-up.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon"><i class="fas fa-circle-dot"></i></div>
                         <h3>Record to Anywhere</h3>
-                        <p>Record now or schedule from the guide. Save to the device, a USB drive, any folder, or a NAS on your network.</p>
+                        <p>Record now, schedule from the guide, or record every episode. Save to the device, a USB drive, any folder, or a NAS on your network.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon"><i class="fas fa-film"></i></div>
@@ -130,7 +185,22 @@
                     <div class="feature-card">
                         <div class="feature-icon"><i class="fas fa-mobile-screen"></i></div>
                         <h3>Set Up From Your Phone</h3>
-                        <p>Scan a QR code and paste long playlist links or keys on your phone instead of typing them with the remote.</p>
+                        <p>Scan a QR code and paste long playlist links or keys on your phone. Later, the same page is a remote with typing, and backs up your settings.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-satellite-dish"></i></div>
+                        <h3>Free Channels, If You Want Them</h3>
+                        <p>No provider? Switch on free-to-air channels by country, with free TV guides. Off until you choose; the lists come from the community iptv-org project.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-users"></i></div>
+                        <h3>Profiles &amp; Parental Lock</h3>
+                        <p>Everyone gets their own favourites and recently watched. Lock channel groups behind a PIN; kids' profiles never see them.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-broom"></i></div>
+                        <h3>A Tidy Line-up</h3>
+                        <p>Find duplicate channels, hide or rename the rest, and when a channel keeps dropping out, get offered another version of it.</p>
                     </div>
                 </div>
             </div>
@@ -160,7 +230,11 @@
                     </div>
                     <div class="install-step">
                         <div class="num">4</div>
-                        <div><h3>Add your service</h3><p>Open IPTV Player, scan the QR code with your phone, and paste your M3U link or Xtream Codes details.</p></div>
+                        <div><h3>Add your service</h3><p>Open IPTV Player, scan the QR code with your phone, and paste your M3U link or Xtream Codes details. No service? Choose <strong>No provider? Try free channels</strong>.</p></div>
+                    </div>
+                    <div class="install-step">
+                        <div class="num">5</div>
+                        <div><h3>Updates come to you</h3><p>From version 0.4.0, the app tells you when there's a new version and installs it for you. The first time, your TV asks to allow installs from IPTV Player.</p></div>
                     </div>
                 </div>
 
@@ -250,6 +324,29 @@
         </div>
     </footer>
 
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot"><img alt=""><p></p></div>
+    <script>
+        // Screenshots open full size; Escape, a click or Enter closes them.
+        (function () {
+            const box = document.querySelector('.lightbox');
+            const img = box.querySelector('img');
+            const text = box.querySelector('p');
+            let opener = null;
+            function open(fig) {
+                const pic = fig.querySelector('img');
+                img.src = pic.src; img.alt = pic.alt;
+                text.textContent = fig.querySelector('figcaption').textContent;
+                opener = fig; box.classList.add('open'); box.tabIndex = -1; box.focus();
+            }
+            function close() { box.classList.remove('open'); if (opener) opener.focus(); }
+            document.querySelectorAll('.shot').forEach(function (fig) {
+                fig.addEventListener('click', function () { open(fig); });
+                fig.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(fig); } });
+            });
+            box.addEventListener('click', close);
+            document.addEventListener('keydown', function (e) { if (box.classList.contains('open') && (e.key === 'Escape' || e.key === 'Enter')) close(); });
+        })();
+    </script>
     <script src="../script.js"></script>
 </body>
 </html>
