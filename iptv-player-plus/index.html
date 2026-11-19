@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Player Plus — Live TV and addons on Android TV</title>
+    <meta name="description" content="IPTV Player Plus: everything in IPTV Player, plus Stremio and Nuvio-style addons for films and series, background trailers, skip intro and credits, next episode and a setup wizard you open on a laptop. Bring your own sources.">
+    <link rel="icon" type="image/svg+xml" href="logo-mark.svg">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        .iptv-banner { display: block; width: min(560px, 100%); margin: 0 auto 2rem; border-radius: 18px; box-shadow: 0 20px 60px rgba(124, 92, 255, 0.25); }
+        .install-steps { max-width: 760px; margin: 0 auto; display: grid; gap: 1rem; }
+        .install-step { display: flex; gap: 1rem; align-items: flex-start; text-align: left; }
+        .install-step .num { flex: 0 0 2.25rem; height: 2.25rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; background: linear-gradient(135deg, #7C5CFF, #FF4D8D); color: #fff; }
+        .install-step code, .apk-meta code { word-break: break-all; padding: 0.1rem 0.4rem; border-radius: 6px; background: rgba(127, 127, 127, 0.15); }
+        .apk-meta { max-width: 760px; margin: 2rem auto 0; font-size: 0.9rem; opacity: 0.8; text-align: center; line-height: 1.7; }
+        /* Screenshots */
+        .shots { max-width: 1100px; margin: 0 auto; }
+        .shot { margin: 0; cursor: zoom-in; }
+        .shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.08); background: #0b0d12; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .shot:hover img, .shot:focus-visible img { transform: translateY(-3px); box-shadow: 0 24px 60px rgba(124, 92, 255, 0.28); }
+        .shot:focus-visible { outline: none; }
+        .shot figcaption { margin-top: 0.7rem; font-size: 0.95rem; color: var(--text-muted, #94a3b8); line-height: 1.5; }
+        .shot figcaption strong { color: var(--text-main, #f8fafc); font-weight: 600; }
+        .shot-main { margin-bottom: 1.75rem; }
+        .shot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+        .shots-note { text-align: center; font-size: 0.85rem; color: var(--text-subtle, #64748b); margin-top: 1.5rem; }
+        .lightbox { position: fixed; inset: 0; background: rgba(5, 7, 12, 0.92); display: none; align-items: center; justify-content: center; padding: 16px; z-index: 1000; cursor: zoom-out; }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-width: min(1600px, 100%); max-height: 88vh; border-radius: 12px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6); }
+        .lightbox p { position: absolute; bottom: 18px; left: 16px; right: 16px; text-align: center; color: #e2e8f0; font-size: 0.95rem; margin: 0; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="brand-wrapper" onclick="window.location.href='../index.html'">
+                <img src="../Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+                <div class="brand-title">
+                    Deviant Dev
+                    <span class="brand-badge">ANDROID TV</span>
+                </div>
+            </div>
+
+            <div class="nav-links-wrapper">
+                <ul>
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#products">Products</a></li>
+                    <li><a href="../index.html#capabilities">Capabilities</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="btn-github-nav">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <ul>
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#products">Products</a></li>
+            <li><a href="../index.html#capabilities">Capabilities</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Product Hero -->
+        <section class="product-hero">
+            <div class="hero-content">
+                <img class="iptv-banner" src="../iptv-player/logo-banner.svg" alt="IPTV Player">
+                <div class="pill-badge">
+                    <span class="dot"></span>
+                    <span>ANDROID TV • GOOGLE TV • EARLY PREVIEW</span>
+                </div>
+                <h1>IPTV Player Plus</h1>
+                <p>
+                    Everything in IPTV Player, plus films and series from Stremio-style addons, in one app. Trailers play behind the details, intros and credits can be skipped, series carry on by themselves, and a setup wizard on your laptop gets it all going. Use it with an IPTV provider, with addons, or both.
+                </p>
+                <div class="cta-buttons">
+                    <a href="iptv-player-plus.apk" class="cta-button primary" download>
+                        <i class="fab fa-android"></i>
+                        <span>Download APK (v0.1.0, 6.0 MB)</span>
+                    </a>
+                    <a href="#install" class="cta-button secondary">
+                        <span>How to install</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section id="screenshots" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="pill-badge"><span>SCREENSHOTS</span></div>
+                    <h2>Films and Series, Done Properly</h2>
+                    <p>Taken on an Android TV at 1080p and a laptop browser. Select any picture to see it full size.</p>
+                </div>
+                <div class="shots">
+                    <figure class="shot shot-main" tabindex="0">
+                        <img src="screens/title-page.jpg" width="1600" height="900" alt="A film's page: the title logo, year, length, rating and plot, with the trailer playing behind and the streams below">
+                        <figcaption><strong>Title pages.</strong> The trailer fades in behind the details, and every stream your addons offer is listed below. Continue watching picks up where you stopped.</figcaption>
+                    </figure>
+                    <div class="shot-grid">
+                        <figure class="shot" tabindex="0">
+                            <img src="screens/skip-intro.jpg" width="1600" height="900" loading="lazy" alt="A Skip intro button in the corner of a playing video">
+                            <figcaption><strong>Skip intro</strong>, recap and credits, at the right moments.</figcaption>
+                        </figure>
+                        <figure class="shot" tabindex="0">
+                            <img src="screens/setup-wizard.jpg" width="1440" height="1100" loading="lazy" alt="The setup wizard in a laptop browser: choosing catalogues for AIOMetadata">
+                            <figcaption><strong>Set up on a laptop.</strong> The TV serves a step-by-step wizard to any browser on your Wi-Fi.</figcaption>
+                        </figure>
+                    </div>
+                    <p class="shots-note">Shown with the public-domain film His Girl Friday and the open Blender film Big Buck Bunny.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="pill-badge"><span>ALL IN ONE</span></div>
+                    <h2>Live TV and Addons, Together</h2>
+                    <p>A player only: it ships no channels, streams or addons. You bring your provider and the addons you choose.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-puzzle-piece"></i></div>
+                        <h3>Stremio-Style Addons</h3>
+                        <p>Install addons by link, from your phone, or with the wizard. Their catalogues become shelves on Home, Movies and Series, and they're searched with everything else.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                        <h3>Setup Wizard on Your Laptop</h3>
+                        <p>Open the address the TV shows: it creates your AIOMetadata catalogues, links your AIOStreams, adds subtitles, and saves setup files you can load on another TV.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-clapperboard"></i></div>
+                        <h3>Trailers in the Background</h3>
+                        <p>A title's trailer fades in behind its page after a few seconds, and when a film ends, a recommendation fills the screen with its trailer.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-forward"></i></div>
+                        <h3>Skip Intro &amp; Next Episode</h3>
+                        <p>Skip intros, recaps and credits using community timings. At the credits, the episode shrinks to the corner and the next one starts with a countdown.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-closed-captioning"></i></div>
+                        <h3>Subtitles That Turn On</h3>
+                        <p>Subtitles from addons such as OpenSubtitles, by language, switched on by themselves in the languages you choose.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-table-list"></i></div>
+                        <h3>Everything from IPTV Player</h3>
+                        <p>The live TV guide, catch-up, recording, reminders, profiles and parental lock, and your provider's films and series, as in <a href="../iptv-player/">IPTV Player</a>.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-house"></i></div>
+                        <h3>Continue Watching Everywhere</h3>
+                        <p>Resume from Home or from the TV's own Continue watching row on the home screen.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-circle-check"></i></div>
+                        <h3>Addons Only? Fine</h3>
+                        <p>No IPTV provider needed: choose "Only addons?" when you first start, and Home is made of your addons' shelves.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+                        <h3>Direct Links Only</h3>
+                        <p>Plays direct video links, such as those from a service you subscribe to. Torrent links are never played.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Install -->
+        <section id="install" class="use-cases">
+            <div class="container">
+                <div class="section-header">
+                    <div class="pill-badge"><span>INSTALL</span></div>
+                    <h2>Install on Your TV</h2>
+                    <p>Not on the Play Store yet, so it's installed ("sideloaded") as an APK. It installs alongside IPTV Player, not over it.</p>
+                </div>
+
+                <div class="install-steps">
+                    <div class="install-step">
+                        <div class="num">1</div>
+                        <div><h3>Get a downloader</h3><p>On your Android TV or Google TV, install the free <strong>Downloader</strong> app (by AFTVnews) from the Play Store.</p></div>
+                    </div>
+                    <div class="install-step">
+                        <div class="num">2</div>
+                        <div><h3>Allow it to install apps</h3><p>Settings → Apps → Security &amp; restrictions → Unknown sources, then turn on <strong>Downloader</strong>. (The exact path varies a little by TV.)</p></div>
+                    </div>
+                    <div class="install-step">
+                        <div class="num">3</div>
+                        <div><h3>Download and install</h3><p>Open Downloader and enter <code>https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk</code>, then choose Install.</p></div>
+                    </div>
+                    <div class="install-step">
+                        <div class="num">4</div>
+                        <div><h3>Set it up</h3><p>Add your IPTV provider as in IPTV Player, or choose <strong>Only addons? Set them up instead</strong>. For the full setup, open the address shown in Settings → Addons on a laptop on the same Wi-Fi.</p></div>
+                    </div>
+                    <div class="install-step">
+                        <div class="num">5</div>
+                        <div><h3>Updates come to you</h3><p>The app tells you when there's a new version and installs it for you. The first time, your TV asks to allow installs from IPTV Player Plus.</p></div>
+                    </div>
+                </div>
+
+                <div class="apk-meta">
+                    Version 0.1.0 · Android 8.0 or newer · Android TV / Google TV (works on phones and tablets too)<br>
+                    SHA-256: <code>300ca19ed71f76458ca401825cdcb3df9814d3dc62255291f0c978f9b0e840cf</code><br>
+                    Early preview build. IPTV Player Plus doesn't provide any channels, streams, addons or subscriptions. Skip times from IntroDB; trailers from YouTube.
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Banner -->
+        <section class="live-demo">
+            <div class="container">
+                <div class="demo-card">
+                    <div class="demo-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <div class="demo-content">
+                        <h3>One App for Live TV, Films and Series</h3>
+                        <p>
+                            Download the APK and bring your provider and your addons together on the big screen.
+                        </p>
+                        <a href="iptv-player-plus.apk" class="demo-link" download>
+                            <i class="fas fa-download"></i>
+                            <span>Download IPTV Player Plus</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="brand-wrapper" onclick="window.location.href='../index.html'">
+                    <img src="../Dlogomin.png" alt="Deviant Dev Logo" class="logo">
+                    <div class="brand-title">Deviant Dev</div>
+                </div>
+                <p>
+                    Independent engineering studio building developer tools, AI applications, and native mobile software that challenge convention.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Products</h5>
+                <ul>
+                    <li><a href="../my-washing-is-out.html">Clothing Line</a></li>
+                    <li><a href="../swaggereditor.html">SwaggerEditor</a></li>
+                    <li><a href="../techradar.html">Tech Radar</a></li>
+                    <li><a href="../aimindmap.html">AI Mind Map</a></li>
+                    <li><a href="../diy-ai.html">DIY AI Assistant</a></li>
+                    <li><a href="../clean-it-ai.html">Clean It AI</a></li>
+                    <li><a href="./">IPTV Player</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#products">Products</a></li>
+                    <li><a href="../index.html#capabilities">Capabilities</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Connect</h5>
+                <ul>
+                    <li><a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="mailto:info@deviantdev.co.uk">Contact Studio</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; 2026 Deviant Dev. All rights reserved.</div>
+            <div class="social-links">
+                <a href="https://github.com/mjsagar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/mjsagar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:info@deviantdev.co.uk" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot"><img alt=""><p></p></div>
+    <script>
+        // Screenshots open full size; Escape, a click or Enter closes them.
+        (function () {
+            const box = document.querySelector('.lightbox');
+            const img = box.querySelector('img');
+            const text = box.querySelector('p');
+            let opener = null;
+            function open(fig) {
+                const pic = fig.querySelector('img');
+                img.src = pic.src; img.alt = pic.alt;
+                text.textContent = fig.querySelector('figcaption').textContent;
+                opener = fig; box.classList.add('open'); box.tabIndex = -1; box.focus();
+            }
+            function close() { box.classList.remove('open'); if (opener) opener.focus(); }
+            document.querySelectorAll('.shot').forEach(function (fig) {
+                fig.addEventListener('click', function () { open(fig); });
+                fig.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(fig); } });
+            });
+            box.addEventListener('click', close);
+            document.addEventListener('keydown', function (e) { if (box.classList.contains('open') && (e.key === 'Escape' || e.key === 'Enter')) close(); });
+        })();
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>
