@@ -1,7 +1,7 @@
 {
-  "versionCode": 1,
-  "versionName": "0.1.0",
+  "versionCode": 2,
+  "versionName": "0.2.0",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "300ca19ed71f76458ca401825cdcb3df9814d3dc62255291f0c978f9b0e840cf",
-  "notes": "First preview of IPTV Player Plus: addons, trailers, skip intro, next episode and a laptop setup wizard."
+  "sha256": "1fb163619470785020d1e57bff069e50e3e4b32208c1de5bf9f5b482c13d47b6",
+  "notes": "My list: save films and series for later from any title page. Home layout: choose which rows Home shows and in what order (Settings)."
 }
