@@ -1,7 +1,7 @@
 {
-  "versionCode": 16,
-  "versionName": "0.4.4",
+  "versionCode": 17,
+  "versionName": "0.4.5",
   "apk": "https://deviantdev.co.uk/iptv-player/iptv-player.apk",
-  "sha256": "6dd30840c98615fd8ce8648172888be3919147d805afa0452fdd46624bf98965",
-  "notes": "Hiding a channel or group in the TV guide no longer leaves you stuck on an empty group."
+  "sha256": "6a282a4ae192157d9fcc14eccbf92044e4612058f05bc0d2f5bedba94a0ca949",
+  "notes": "Films and episodes you've started now appear in your TV's own Continue watching row on the home screen. The remote always reaches the film player's controls."
 }
