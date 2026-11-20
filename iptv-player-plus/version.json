@@ -1,7 +1,7 @@
 {
-  "versionCode": 4,
-  "versionName": "0.3.0",
+  "versionCode": 5,
+  "versionName": "0.3.1",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "b8f27c54024204d5d3d2cc2a7ee0919dcb3080ac3b5fd47e6b2a12b26e2673e6",
-  "notes": "A new look for Home: a featured title with its trailer at the top, and the details of whatever you're on shown above the rows. New Streaming services and Studios rows (Netflix originals, Marvel, Pixar and more). A Play / Resume button on every title, faster posters, episode pictures, and clearer filter buttons."
+  "sha256": "07847c6d1a7a2dfc6b957242832b4c4a1db67ab3f140fa09ffc33f5749e45049",
+  "notes": "New option in Settings > Playback: skip intros and recaps automatically, without pressing a button. Each one is skipped once per episode, so you can still go back and watch it."
 }
