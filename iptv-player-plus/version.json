@@ -1,7 +1,7 @@
 {
-  "versionCode": 8,
-  "versionName": "0.4.1",
+  "versionCode": 9,
+  "versionName": "0.4.2",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "6d47fc4ea83d5bd4429b4d7273d1d9763112c4cef9b9079d5a289a0c4e483017",
-  "notes": "When a film from your provider ends, the three films to watch next now come from your provider's own films first (similar ones, best rated), so they're ones you can play."
+  "sha256": "9fa64757296184db6dc39a1ad684ba7710313c4cefbdf006e3d43a4c9ff90ec4",
+  "notes": "New \"Level the volume\" option in Settings > Playback for clearer speech and softer loud bits. Search remembers your recent searches and suggests as you type. Subtitles stay off unless you turn them on, audio tracks show their language, and rating posters are on by default."
 }
