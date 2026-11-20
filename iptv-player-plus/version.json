@@ -1,7 +1,7 @@
 {
-  "versionCode": 3,
-  "versionName": "0.2.1",
+  "versionCode": 4,
+  "versionName": "0.3.0",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "2ecd081401636bb3a83786b72e692a13e7bed1c9c7c62be819077f91d555047f",
-  "notes": "OK on remotes connected over HDMI-CEC (your TV's remote) now opens the TV guide reliably instead of jumping straight back to the channel."
+  "sha256": "b8f27c54024204d5d3d2cc2a7ee0919dcb3080ac3b5fd47e6b2a12b26e2673e6",
+  "notes": "A new look for Home: a featured title with its trailer at the top, and the details of whatever you're on shown above the rows. New Streaming services and Studios rows (Netflix originals, Marvel, Pixar and more). A Play / Resume button on every title, faster posters, episode pictures, and clearer filter buttons."
 }
