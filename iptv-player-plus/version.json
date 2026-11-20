@@ -1,7 +1,7 @@
 {
-  "versionCode": 7,
-  "versionName": "0.4.0",
+  "versionCode": 8,
+  "versionName": "0.4.1",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "10659b658523bff6985bfa53e036308729c78b7ba6f2693c5fa3358643760c9e",
-  "notes": "Watch recordings while they record (from the start or live, with pause and rewind), and Live TV plays a channel that's recording from the recording. Choose another player (VLC, MX Player\u2026) for films and series. Search inside streaming services and studios. Three films to watch next at the end of a film. Settings in groups, the side menu goes straight into the page you pick, and updates are checked whenever the app opens."
+  "sha256": "6d47fc4ea83d5bd4429b4d7273d1d9763112c4cef9b9079d5a289a0c4e483017",
+  "notes": "When a film from your provider ends, the three films to watch next now come from your provider's own films first (similar ones, best rated), so they're ones you can play."
 }
