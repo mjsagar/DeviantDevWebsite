@@ -1,7 +1,7 @@
 {
-  "versionCode": 17,
-  "versionName": "0.4.5",
+  "versionCode": 18,
+  "versionName": "0.4.6",
   "apk": "https://deviantdev.co.uk/iptv-player/iptv-player.apk",
-  "sha256": "6a282a4ae192157d9fcc14eccbf92044e4612058f05bc0d2f5bedba94a0ca949",
-  "notes": "Films and episodes you've started now appear in your TV's own Continue watching row on the home screen. The remote always reaches the film player's controls."
+  "sha256": "bb14022ea235bd15f8e93e7e56fab0d789dd41b270cd3654c6c9fe3b432cc97d",
+  "notes": "OK on remotes connected over HDMI-CEC (your TV's remote) now opens the TV guide reliably instead of jumping straight back to the channel."
 }
