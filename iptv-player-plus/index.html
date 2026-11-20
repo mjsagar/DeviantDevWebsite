@@ -30,6 +30,26 @@
         .lightbox.open { display: flex; }
         .lightbox img { max-width: min(1600px, 100%); max-height: 88vh; border-radius: 12px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6); }
         .lightbox p { position: absolute; bottom: 18px; left: 16px; right: 16px; text-align: center; color: #e2e8f0; font-size: 0.95rem; margin: 0; }
+        /* System requirements */
+        .spec-wrap { max-width: 900px; margin: 0 auto; }
+        .spec-table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; overflow: hidden; text-align: left; font-size: 0.95rem; }
+        .spec-table th, .spec-table td { padding: 0.85rem 1rem; vertical-align: top; border-bottom: 1px solid rgba(255, 255, 255, 0.06); line-height: 1.5; }
+        .spec-table tr:last-child th, .spec-table tr:last-child td { border-bottom: 0; }
+        .spec-table thead th { background: rgba(124, 92, 255, 0.12); font-weight: 600; color: var(--text-main, #f8fafc); }
+        .spec-table tbody th { font-weight: 600; color: var(--text-main, #f8fafc); white-space: nowrap; }
+        .spec-table td { color: var(--text-muted, #94a3b8); }
+        .spec-table small { display: block; opacity: 0.8; margin-top: 0.2rem; }
+        .spec-devices { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1.5rem; text-align: left; }
+        .spec-devices .feature-card h3 { margin-bottom: 0.4rem; }
+        .spec-note { text-align: center; font-size: 0.85rem; color: var(--text-subtle, #64748b); margin-top: 1.5rem; line-height: 1.6; }
+        @media (max-width: 640px) {
+            .spec-table thead { display: none; }
+            .spec-table, .spec-table tbody, .spec-table tr, .spec-table th, .spec-table td { display: block; width: 100%; }
+            .spec-table tr { border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 0.4rem 0; }
+            .spec-table tbody th { border: 0; padding-bottom: 0.2rem; }
+            .spec-table td { border: 0; padding-top: 0.2rem; padding-bottom: 0.4rem; }
+            .spec-table td::before { content: attr(data-label) ": "; font-weight: 600; color: var(--text-main, #f8fafc); }
+        }
     </style>
 </head>
 <body>
@@ -210,6 +230,53 @@
                         <h3>Direct Links Only</h3>
                         <p>Plays direct video links, such as those from a service you subscribe to. Torrent links are never played.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System requirements -->
+        <section id="requirements" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="pill-badge"><span>REQUIREMENTS</span></div>
+                    <h2>Will It Run on My TV?</h2>
+                    <p>Almost certainly. IPTV Player Plus is light: video is decoded by your TV's own video chip, and even with a 15,000-channel provider the app stays under 210 MB of memory.</p>
+                </div>
+
+                <div class="spec-wrap">
+                    <table class="spec-table">
+                        <thead>
+                            <tr><th scope="col"></th><th scope="col">Minimum</th><th scope="col">Recommended</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Android</th><td data-label="Minimum">8.0</td><td data-label="Recommended">10 or newer (Google TV, Fire OS 7 or newer)</td></tr>
+                            <tr><th scope="row">Memory (RAM)</th><td data-label="Minimum">1.5 GB<small>1 GB should work, but the TV closes the app more often in the background</small></td><td data-label="Recommended">2 GB or more</td></tr>
+                            <tr><th scope="row">Processor</th><td data-label="Minimum">Quad-core (Cortex-A53 class)</td><td data-label="Recommended">Quad-core Cortex-A55 or better, for the smoothest scrolling through posters</td></tr>
+                            <tr><th scope="row">Storage</th><td data-label="Minimum">About 15 MB, plus up to 150 MB for cached artwork</td><td data-label="Recommended">Room for recordings: about 3 GB per hour at 1080p (a USB drive works)</td></tr>
+                            <tr><th scope="row">Internet</th><td data-label="Minimum">8 Mb/s for 1080p</td><td data-label="Recommended">25 Mb/s or more for 4K; more again to record one channel while watching another</td></tr>
+                            <tr><th scope="row">Video</th><td data-label="Minimum">H.264 (every Android TV device)</td><td data-label="Recommended">HEVC (H.265) support for 4K and HDR streams</td></tr>
+                        </tbody>
+                    </table>
+
+                    <div class="spec-devices">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-circle-check"></i></div>
+                            <h3>Great</h3>
+                            <p>Google TV Streamer, Chromecast with Google TV (4K), Fire TV Stick 4K (2023) and 4K Max, onn 4K, NVIDIA Shield, and most smart TVs with Google TV.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-thumbs-up"></i></div>
+                            <h3>Good</h3>
+                            <p>Chromecast with Google TV (HD), the original Fire TV Stick 4K and similar 1.5 GB devices. Everything works; long poster rows scroll a little less smoothly.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-triangle-exclamation"></i></div>
+                            <h3>Works, with limits</h3>
+                            <p>1 GB devices such as the Fire TV Stick (3rd gen) and Fire TV Stick Lite: playback is fine, but expect some stutter on the Movies and Series pages.</p>
+                        </div>
+                    </div>
+
+                    <p class="spec-note">Measured with version 0.4.3 on an Android TV test device with 2 GB of memory and a quad-core processor: about 100 MB while watching live TV, 150 MB playing a 1080p film, and a peak of 205 MB while loading a 15,000-channel line-up.</p>
                 </div>
             </div>
         </section>
