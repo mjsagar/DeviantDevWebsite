@@ -1,7 +1,7 @@
 {
-  "versionCode": 5,
-  "versionName": "0.3.1",
+  "versionCode": 6,
+  "versionName": "0.3.2",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "07847c6d1a7a2dfc6b957242832b4c4a1db67ab3f140fa09ffc33f5749e45049",
-  "notes": "New option in Settings > Playback: skip intros and recaps automatically, without pressing a button. Each one is skipped once per episode, so you can still go back and watch it."
+  "sha256": "31a1d95e41f60d827dc7b990e759fd14cd0665ffd63730cb67ccd0b6c9569cb0",
+  "notes": "Rating posters: turn on RPDB (RatingPosterDB) in Settings > Rating posters, with your own key or RPDB's free one, and posters show IMDb, Rotten Tomatoes and Metacritic scores."
 }
