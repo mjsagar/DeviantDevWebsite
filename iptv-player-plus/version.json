@@ -1,7 +1,7 @@
 {
-  "versionCode": 11,
-  "versionName": "0.4.4",
+  "versionCode": 12,
+  "versionName": "0.4.5",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "b99ff998280726841d0a89a38ecf354433d1e8d3e835e282cdf51c03569a97f3",
-  "notes": "Pause anything (live TV too) to see who's in it, with photos and details. Choose a stream shows the best three from each addon with clear quality badges. Series show when the next episodes air, films and episodes start on their artwork, and you can mark things watched (hold OK on an episode). Watchly picks-for-you rows, and steadier menus: holding OK no longer picks an option by itself."
+  "sha256": "f7c18d6bd30d9371419ab2a33df6f7c808b1e9bf12ad929fe560fe09d7107ed7",
+  "notes": "A new glass look (Settings → Home & appearance → Style, Classic still there), a tidier TiviMate-style guide, and a side menu that tucks away when you're not using it. In Live TV, Left shows the channels over the picture and Left again the groups in their place; the guide and Live TV keep the same group. Search finds titles however they're typed (spiderman, pokemon), live channels keep retrying when a provider refuses them, and a playback log (Settings → Playback) helps track down streams that fail."
 }
