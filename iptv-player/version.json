@@ -1,7 +1,7 @@
 {
-  "versionCode": 18,
-  "versionName": "0.4.6",
+  "versionCode": 19,
+  "versionName": "0.4.7",
   "apk": "https://deviantdev.co.uk/iptv-player/iptv-player.apk",
-  "sha256": "bb14022ea235bd15f8e93e7e56fab0d789dd41b270cd3654c6c9fe3b432cc97d",
-  "notes": "OK on remotes connected over HDMI-CEC (your TV's remote) now opens the TV guide reliably instead of jumping straight back to the channel."
+  "sha256": "e362cabdfceeb72b6ec8f978f427ededb78a9064066fce297465965d36e2d8bc",
+  "notes": "A new glass look (Settings → Style, Classic still there) and a side menu that tucks away when you're not using it. In Live TV, Left shows the channels over the picture and Left again the groups in their place; the guide and Live TV keep the same group. The guide can be compact like TiviMate (Settings → Guide layout) and shows a programme's picture and details when you rest on it. Search finds titles however they're typed, live channels keep retrying when a provider refuses them, and a playback log (Settings) helps track down streams that fail."
 }
