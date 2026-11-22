@@ -1,7 +1,7 @@
 {
-  "versionCode": 13,
-  "versionName": "0.4.6",
+  "versionCode": 14,
+  "versionName": "0.4.7",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "0ee2db1edca0091cc3048e7a5a8645a99a55aa61d119b805da99b20b9b7b13c1",
-  "notes": "Rest on a programme in the guide for two seconds to see its picture and details right in the grid. Live TV's groups now replace the channel list in the same see-through style, and the guide's group bar and day arrows are gone. Clearer everywhere: readable buttons, darker shading behind text over pictures, titles in short guide programmes, a tidier programme menu, how far through you are on the pause screen, and Loading… while a film buffers."
+  "sha256": "fe7588359e866e883ec88007eeefa7ac9f9ac110374819aca09cb8df382b4628",
+  "notes": "Search now lists only the films and series something can actually play (from your addons or your provider), so a result no longer opens to \"No playable streams\". A film that won't play says what went wrong in plain words, with Try again and Back. Classic style's guide is no longer purple."
 }
