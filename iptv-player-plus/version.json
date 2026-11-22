@@ -1,7 +1,7 @@
 {
-  "versionCode": 14,
-  "versionName": "0.4.7",
+  "versionCode": 15,
+  "versionName": "0.4.8",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "fe7588359e866e883ec88007eeefa7ac9f9ac110374819aca09cb8df382b4628",
-  "notes": "Search now lists only the films and series something can actually play (from your addons or your provider), so a result no longer opens to \"No playable streams\". A film that won't play says what went wrong in plain words, with Try again and Back. Classic style's guide is no longer purple."
+  "sha256": "71071788651184e63ba31748fe850dade33d9f7914e64d3cd9d105195082293d",
+  "notes": "Change any setting from a computer: Settings → Phone remote & backup shows an address to open in a browser on the same Wi-Fi. Sources, guides, channel groups and categories, channel names, playback, recordings (including USB drives and a shared folder), Home rows, style, addons, keys, Trakt, profiles and the parental lock, all applied on the TV straight away."
 }
