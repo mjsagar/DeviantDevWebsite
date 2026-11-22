@@ -1,7 +1,7 @@
 {
-  "versionCode": 16,
-  "versionName": "0.4.9",
+  "versionCode": 17,
+  "versionName": "0.4.10",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "9d5b712e4ea275daa04ebe0ada93f9ec9023ef61c04b9c79299edc5572c4d57f",
-  "notes": "Better search: titles your provider tags (\"EN - Yellowjackets\") and titles in very large libraries now come up as you type, and your addons are searched for the full titles too, so a partly typed name finds them there as well."
+  "sha256": "8830a95cd466bf5f49def0ea5dfd63d66e1ca8fce7b1e35da7523678667b7d8e",
+  "notes": "Reliability and setup fixes: programme reminders now fire reliably in the background, saving settings or restoring backups from your phone or computer handles non-English characters cleanly, scheduled recordings keep their early/late margins after a TV restart, and very large playlists and movie libraries import more smoothly."
 }

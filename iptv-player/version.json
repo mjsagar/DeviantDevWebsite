@@ -1,7 +1,7 @@
 {
-  "versionCode": 19,
-  "versionName": "0.4.7",
+  "versionCode": 20,
+  "versionName": "0.4.8",
   "apk": "https://deviantdev.co.uk/iptv-player/iptv-player.apk",
-  "sha256": "e362cabdfceeb72b6ec8f978f427ededb78a9064066fce297465965d36e2d8bc",
-  "notes": "A new glass look (Settings → Style, Classic still there) and a side menu that tucks away when you're not using it. In Live TV, Left shows the channels over the picture and Left again the groups in their place; the guide and Live TV keep the same group. The guide can be compact like TiviMate (Settings → Guide layout) and shows a programme's picture and details when you rest on it. Search finds titles however they're typed, live channels keep retrying when a provider refuses them, and a playback log (Settings) helps track down streams that fail."
+  "sha256": "65d894c928fa7f0074bff88ccff4ec3b22da2bde83961c547b3af903aa602800",
+  "notes": "Reliability and setup fixes: programme reminders now fire reliably in the background, phone setup and backup restore handle non-English characters cleanly, scheduled recordings keep their early/late margins after a TV restart, and very large playlists and movie libraries import more smoothly."
 }
