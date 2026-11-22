@@ -1,7 +1,7 @@
 {
-  "versionCode": 12,
-  "versionName": "0.4.5",
+  "versionCode": 13,
+  "versionName": "0.4.6",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "f7c18d6bd30d9371419ab2a33df6f7c808b1e9bf12ad929fe560fe09d7107ed7",
-  "notes": "A new glass look (Settings → Home & appearance → Style, Classic still there), a tidier TiviMate-style guide, and a side menu that tucks away when you're not using it. In Live TV, Left shows the channels over the picture and Left again the groups in their place; the guide and Live TV keep the same group. Search finds titles however they're typed (spiderman, pokemon), live channels keep retrying when a provider refuses them, and a playback log (Settings → Playback) helps track down streams that fail."
+  "sha256": "0ee2db1edca0091cc3048e7a5a8645a99a55aa61d119b805da99b20b9b7b13c1",
+  "notes": "Rest on a programme in the guide for two seconds to see its picture and details right in the grid. Live TV's groups now replace the channel list in the same see-through style, and the guide's group bar and day arrows are gone. Clearer everywhere: readable buttons, darker shading behind text over pictures, titles in short guide programmes, a tidier programme menu, how far through you are on the pause screen, and Loading… while a film buffers."
 }
