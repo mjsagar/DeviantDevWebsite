@@ -1,7 +1,7 @@
 {
-  "versionCode": 17,
-  "versionName": "0.4.10",
+  "versionCode": 18,
+  "versionName": "0.5.0",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "8830a95cd466bf5f49def0ea5dfd63d66e1ca8fce7b1e35da7523678667b7d8e",
-  "notes": "Reliability and setup fixes: programme reminders now fire reliably in the background, saving settings or restoring backups from your phone or computer handles non-English characters cleanly, scheduled recordings keep their early/late margins after a TV restart, and very large playlists and movie libraries import more smoothly."
+  "sha256": "b2df6123163dda116e1cadc4e6b164d4916bc44b9efab75db665a8ce96887576",
+  "notes": "Libraries: make your own collections for a person or a group (say, Kids) from the new Libraries item in the side menu, and fill them with channels, films and series (Library on a title's page, or hold OK on a channel). Resuming a film or episode from your addons now gets a fresh link, so it no longer fails after your home's internet address changes. In the guide, Right goes back from the groups list."
 }
