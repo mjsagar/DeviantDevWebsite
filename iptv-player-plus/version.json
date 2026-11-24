@@ -1,7 +1,7 @@
 {
-  "versionCode": 20,
-  "versionName": "0.5.2",
+  "versionCode": 21,
+  "versionName": "0.5.3",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "43c7bd8197c85aac181e5f46187bd69e3b40056458f13cd9e2398675b0696a2c",
-  "notes": "Search finds more from your addons: several words are also searched one by one (\"hulk smash\" finds Hulk and the Agents of S.M.A.S.H.), a series is checked on its first and newest episodes, and titles are no longer hidden when your addons are too slow to say whether they can play."
+  "sha256": "0fb58618825eed10053446543d52e1410c2616b2ac230e3d58e35dba90d8255a",
+  "notes": "A new Size setting (Settings → Home & appearance → Size): draw everything smaller to fit more on screen, with more channels in the guide and more posters in a row. On a 4K TV it's a step smaller by itself; choose Small for more still, or Large for the size it was."
 }
