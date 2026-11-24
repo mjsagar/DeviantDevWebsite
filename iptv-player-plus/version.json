@@ -1,7 +1,7 @@
 {
-  "versionCode": 18,
-  "versionName": "0.5.0",
+  "versionCode": 19,
+  "versionName": "0.5.1",
   "apk": "https://deviantdev.co.uk/iptv-player-plus/iptv-player-plus.apk",
-  "sha256": "b2df6123163dda116e1cadc4e6b164d4916bc44b9efab75db665a8ce96887576",
-  "notes": "Libraries: make your own collections for a person or a group (say, Kids) from the new Libraries item in the side menu, and fill them with channels, films and series (Library on a title's page, or hold OK on a channel). Resuming a film or episode from your addons now gets a fresh link, so it no longer fails after your home's internet address changes. In the guide, Right goes back from the groups list."
+  "sha256": "c288d26e638cbc36ab455690ffe351fee034bb0872e24e7801cd800b8a6b1b50",
+  "notes": "English audio is now chosen by itself when a channel, film or episode offers it (Settings → Playback → Audio, where you can choose the stream's own instead). Search no longer keeps focus stuck in the search box after picking a recent search or a suggestion."
 }
